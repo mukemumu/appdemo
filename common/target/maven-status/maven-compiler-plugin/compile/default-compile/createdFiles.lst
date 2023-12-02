@@ -1,0 +1,9 @@
+com\tang\appdemo\common\exception\AppException.class
+com\tang\appdemo\common\result\ResultCodeEnum.class
+com\tang\appdemo\common\utils\CaptchaUtils.class
+com\tang\appdemo\common\exception\LoginException.class
+com\tang\appdemo\common\result\Result.class
+com\tang\appdemo\common\CommonApplication.class
+com\tang\appdemo\common\utils\EmailUtils.class
+com\tang\appdemo\common\exception\LoginExceptionHandler.class
+com\tang\appdemo\common\exception\ErrorCode.class

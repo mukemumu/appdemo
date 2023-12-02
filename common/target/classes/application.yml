@@ -1,0 +1,7 @@
+server:
+  port: 8501
+spring:
+  application:
+    name: proto-api
+  profiles:
+    active: dev

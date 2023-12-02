@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.tang.appdemo.server.service.LoginServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.629 s <<< FAILURE! - in com.tang.appdemo.server.service.LoginServiceTest
+loginTest  Time elapsed: 0.612 s  <<< ERROR!
+com.tang.appdemo.common.exception.LoginException
+	at com.tang.appdemo.server.service.LoginServiceTest.loginTest(LoginServiceTest.java:22)
+
