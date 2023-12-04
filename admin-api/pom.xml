@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.tang.appdemo</groupId>
-            <artifactId>proto-api</artifactId>
+            <artifactId>portal-api</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>

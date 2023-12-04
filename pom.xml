@@ -12,7 +12,7 @@
         <module>common</module>
         <module>repository</module>
         <module>service</module>
-        <module>proto-api</module>
+        <module>portal-api</module>
         <module>admin-api</module>
     </modules>
 
