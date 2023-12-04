@@ -1,8 +1,0 @@
-com\tang\appdemo\repository\manager\UserManager.class
-com\tang\appdemo\repository\RepositoryApplication.class
-com\tang\appdemo\repository\manager\impl\UserManagerImpl.class
-com\tang\appdemo\repository\model\vo\LoginVo.class
-com\tang\appdemo\repository\model\po\User.class
-com\tang\appdemo\repository\model\po\BaseEntity.class
-com\tang\appdemo\repository\model\dto\LoginDto.class
-com\tang\appdemo\repository\mapper\UserMapper.class
