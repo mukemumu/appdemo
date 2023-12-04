@@ -3,6 +3,12 @@ package com.tang.appdemo.common.result;
 import com.tang.appdemo.common.exception.ErrorCode;
 import lombok.Getter;
 
+/**
+ * @description
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:05
+ */
 @Getter
 public enum ResultCodeEnum {
     SUCCESS(200 , "操作成功") ;

@@ -4,11 +4,10 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- *
- *
+ * @description 全局实体基类
  *
  * @author tanghx
- * Create on 2023/11/29
+ * @date 2023/12/4 10:09
  */
 @Data
 public class BaseEntity {

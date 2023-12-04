@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import static java.lang.Math.log;
-
+/**
+ * @description 全局异常处理
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:03
+ */
 @Slf4j
 @ControllerAdvice
-public class LoginExceptionHandler {
+public class AppExceptionHandler {
 
     @ResponseBody
     @ExceptionHandler(Exception.class)

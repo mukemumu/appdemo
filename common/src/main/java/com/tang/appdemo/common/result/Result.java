@@ -4,6 +4,12 @@ import com.tang.appdemo.common.exception.AppException;
 import com.tang.appdemo.common.exception.ErrorCode;
 import lombok.Data;
 
+/**
+ * @description
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:05
+ */
 @Data
 public class Result<T> {
     private Integer code;

@@ -7,6 +7,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * @description 异常信息枚举
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:00
+ */
 @Getter
 @NoArgsConstructor
 public enum ErrorCode {

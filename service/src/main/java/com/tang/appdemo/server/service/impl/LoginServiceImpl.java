@@ -17,6 +17,12 @@ import org.springframework.util.DigestUtils;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @description user 接口实现
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:12
+ */
 @Service
 public class LoginServiceImpl implements LoginService {
 

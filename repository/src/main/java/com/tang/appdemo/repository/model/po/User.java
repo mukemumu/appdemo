@@ -3,9 +3,10 @@ package com.tang.appdemo.repository.model.po;
 import lombok.Data;
 
 /**
- * table: user
+ * @description user 表
+ *
  * @author tanghx
- * Create on 2023/11/29
+ * @date 2023/12/4 10:10
  */
 @Data
 public class User extends BaseEntity {

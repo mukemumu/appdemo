@@ -4,6 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.DigestUtils;
 
+/**
+ * @description 加密功能测试
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:16
+ */
 @SpringBootTest
 public class MD5Test {
 

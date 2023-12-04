@@ -9,6 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+/**
+ * @description User 通用功能实现
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:07
+ */
 @Component
 public class UserManagerImpl implements UserManager {
 

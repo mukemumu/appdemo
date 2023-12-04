@@ -1,4 +1,4 @@
-package com.tang.appdemo.proto_api.controller;
+package com.tang.appdemo.protoApi.controller;
 
 import com.tang.appdemo.common.result.Result;
 import com.tang.appdemo.common.result.ResultCodeEnum;
@@ -11,6 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @description 登陆请求处理
+ *
+ * @author tanghx
+ * @date 2023/12/4 10:06
+ */
 @RestController
 @RequestMapping(value = "/user")
 public class LoginController {
