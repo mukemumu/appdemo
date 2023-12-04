@@ -1,4 +1,4 @@
-package com.tang.appdemo.server.service.impl;
+package com.tang.appdemo.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.tang.appdemo.common.exception.ErrorCode;
@@ -7,9 +7,8 @@ import com.tang.appdemo.repository.mapper.UserMapper;
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.po.User;
 import com.tang.appdemo.repository.model.vo.LoginVo;
-import com.tang.appdemo.server.service.LoginService;
+import com.tang.appdemo.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -18,10 +17,9 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @description user 接口实现
- *
  * @author tanghx
- * @date 2023/12/4 10:12
+ * @description
+ * @date 2023/12/4 15:23
  */
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -53,3 +51,4 @@ public class LoginServiceImpl implements LoginService {
         return loginVo;
     }
 }
+

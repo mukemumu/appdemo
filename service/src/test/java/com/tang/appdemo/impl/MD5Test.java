@@ -1,4 +1,4 @@
-package com.tang.appdemo.server.impl;
+package com.tang.appdemo.impl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

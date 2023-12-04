@@ -4,7 +4,7 @@ import com.tang.appdemo.common.result.Result;
 import com.tang.appdemo.common.result.ResultCodeEnum;
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.vo.LoginVo;
-import com.tang.appdemo.server.service.LoginService;
+import com.tang.appdemo.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

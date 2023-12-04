@@ -1,8 +1,9 @@
-package com.tang.appdemo.server.service;
+package com.tang.appdemo.service;
 
 
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.vo.LoginVo;
+import com.tang.appdemo.service.LoginService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +24,7 @@ public class LoginServiceTest {
     public void loginTest(){
         LoginDto loginDto = new LoginDto();
         loginDto.setUsername("admin");
-        loginDto.setPassword("12345");
+        loginDto.setPassword("111111");
 
         LoginVo vo = loginService.login(loginDto);
         System.out.println(vo.getToken());
