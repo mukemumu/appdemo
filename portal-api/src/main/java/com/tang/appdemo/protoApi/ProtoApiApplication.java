@@ -14,9 +14,9 @@ import org.springframework.context.annotation.ComponentScan;
 @Slf4j
 @SpringBootApplication
 @ComponentScan(basePackages = "com.tang.appdemo")
-public class PortalApiApplication {
+public class ProtoApiApplication {
     public static void main(String[] args) {
         log.info("启动···");
-        SpringApplication.run(PortalApiApplication.class, args);
+        SpringApplication.run(ProtoApiApplication.class, args);
     }
 }
