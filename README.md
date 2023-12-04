@@ -6,8 +6,8 @@
 
 # 项目功能完善
 ## 整合 mybatis 逆向工程 
-* 引入 mybatis-generator-plugin-1.0.jar 放在 repository 模块中
-* 在 pom.xml 文件中添加插件
+1. 引入 mybatis-generator-plugin-1.0.jar 放在 repository 模块中
+2. 在 pom.xml 文件中添加插件
 `
 <build>
         <plugins>
@@ -38,4 +38,4 @@
         </plugins>
     </build>
   `
-* 在 resources 中添加 generatorConfig.xml 文件
+3. 在 resources 中添加 generatorConfig.xml 文件
