@@ -4,14 +4,16 @@ import com.tang.appdemo.repository.model.po.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
- * @description 基础功能测试
- *
  * @author tanghx
- * @date 2023/12/4 10:16
+ * @description
+ * @date 2023/12/5 14:30
  */
+
 @SpringBootTest
+@ComponentScan("com.tang.addemo.repository")
 public class UserMapperTest {
 
     @Autowired
@@ -19,7 +21,7 @@ public class UserMapperTest {
 
     @Test
     public void findUserByUsernameTest(){
-        User user = userMapper.findUserByUsername("admin");
-        System.out.println(user.getUserName());
+        String username = "admin";
+        User userById = userMapper.findUserByUsername(username);
     }
 }

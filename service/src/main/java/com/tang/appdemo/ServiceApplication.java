@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2023/12/4 15:22
  */
 @SpringBootApplication
+@ComponentScan(basePackages = "com.tang.appdemo")
 public class ServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ServiceApplication.class, args);

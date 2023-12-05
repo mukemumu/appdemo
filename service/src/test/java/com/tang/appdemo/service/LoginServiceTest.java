@@ -1,19 +1,17 @@
 package com.tang.appdemo.service;
 
-
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.vo.LoginVo;
-import com.tang.appdemo.service.LoginService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * @description 基础功能测试
- *
  * @author tanghx
- * @date 2023/12/4 10:16
+ * @description
+ * @date 2023/12/5 14:38
  */
+
 @SpringBootTest
 public class LoginServiceTest {
 
@@ -21,12 +19,10 @@ public class LoginServiceTest {
     private LoginService loginService;
 
     @Test
-    public void loginTest(){
+    public void LoginTest(){
         LoginDto loginDto = new LoginDto();
         loginDto.setUsername("admin");
         loginDto.setPassword("111111");
-
         LoginVo vo = loginService.login(loginDto);
-        System.out.println(vo.getToken());
     }
 }
