@@ -2,6 +2,7 @@ package com.tang.appdemo.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.tang.appdemo.common.exception.ErrorCode;
+import com.tang.appdemo.common.exception.LoginException;
 import com.tang.appdemo.common.utils.LoginContextUtil;
 import com.tang.appdemo.repository.model.po.User;
 import jakarta.servlet.http.HttpServletRequest;
@@ -42,14 +43,15 @@ public class LoginInterceptor implements HandlerInterceptor {
         if ("".equals(token)){
             // 用户没有完成登陆
             log.error(ErrorCode.LOGIN_AUTH.getI18nKey());
-            return false;
+            throw new LoginException(ErrorCode.LOGIN_AUTH);
+
         }
         // 通过 token 从 redis 中获取用户信息
         String userInfo = redisTemplate.opsForValue().get("");
         if ("".equals(userInfo)){
             // 用户没有完成登陆
             log.error(ErrorCode.LOGIN_AUTH.getI18nKey());
-            return false;
+            throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
 
         //

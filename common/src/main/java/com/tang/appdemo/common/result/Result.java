@@ -28,14 +28,6 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> builder(T data, ResultCodeEnum codeEnum){
-        Result<T> result = new Result<>();
-        result.setData(data);
-        result.setCode(codeEnum.getCode());
-        result.setMessage(codeEnum.getMessage());
-        return result;
-    }
-
     public static <T> Result<T> builder(T data, ErrorCode errorCode){
         Result<T> result = new Result<>();
         result.setData(data);

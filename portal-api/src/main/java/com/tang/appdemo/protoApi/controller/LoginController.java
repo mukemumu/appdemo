@@ -1,8 +1,6 @@
 package com.tang.appdemo.protoApi.controller;
 
 import com.tang.appdemo.interceptor.annotation.LoginRequired;
-import com.tang.appdemo.common.result.Result;
-import com.tang.appdemo.common.result.ResultCodeEnum;
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.vo.LoginVo;
 import com.tang.appdemo.service.LoginService;
