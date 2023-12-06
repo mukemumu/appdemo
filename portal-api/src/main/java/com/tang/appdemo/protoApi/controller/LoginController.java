@@ -1,5 +1,6 @@
 package com.tang.appdemo.protoApi.controller;
 
+import com.tang.appdemo.interceptor.annotation.LoginRequired;
 import com.tang.appdemo.common.result.Result;
 import com.tang.appdemo.common.result.ResultCodeEnum;
 import com.tang.appdemo.repository.model.dto.LoginDto;
@@ -24,9 +25,10 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    @LoginRequired
     @PostMapping(value = "/login")
-    public Result<LoginVo> login(@RequestBody LoginDto loginDto){
-        LoginVo login = loginService.login(loginDto);
-        return Result.builder(login, ResultCodeEnum.SUCCESS);
+    public LoginVo login(@RequestBody LoginDto loginDto){
+        LoginVo loginVo = loginService.login(loginDto);
+        return loginVo;
     }
 }

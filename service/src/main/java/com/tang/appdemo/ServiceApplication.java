@@ -5,9 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- * @author tanghx
  * @description
- * @date 2023/12/4 15:22
+ *
+ * @author tanghx
+ * @date 2023/12/6 10:46
  */
 @SpringBootApplication
 public class ServiceApplication {

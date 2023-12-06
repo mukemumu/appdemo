@@ -44,7 +44,7 @@ public class LoginServiceImpl implements LoginService {
         }
 
         String token = UUID.randomUUID().toString().replace("-", "");
-        redisTemplate.opsForValue().set("user.login.token:"+token, JSON.toJSONString(user),10, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set("user.login.token:"+token, JSON.toJSONString(user),10, TimeUnit.MINUTES);
 
         LoginVo loginVo = new LoginVo();
         loginVo.setToken(token);
