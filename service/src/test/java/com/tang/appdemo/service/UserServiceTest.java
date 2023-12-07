@@ -13,16 +13,16 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 
 @SpringBootTest
-public class LoginServiceTest {
+public class UserServiceTest {
 
     @Autowired
-    private LoginService loginService;
+    private UserService userService;
 
     @Test
     public void LoginTest(){
         LoginDto loginDto = new LoginDto();
         loginDto.setUsername("admin");
         loginDto.setPassword("111111");
-        LoginVo vo = loginService.login(loginDto);
+        LoginVo vo = userService.login(loginDto);
     }
 }

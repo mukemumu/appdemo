@@ -23,7 +23,7 @@ public class User extends BaseEntity {
     private String description;
 
     /**
-     * @see UserStatus
+     * 1：表示可用，0：表示禁用
      */
     private Integer status;
 

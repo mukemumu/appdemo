@@ -54,7 +54,7 @@
             <appender-ref ref="ERROR" level="ERROR"/>
         </root>
 
-        <logger name="com.github.greatwqs.app" level="DEBUG" additivity="false">
+        <logger name="com.tang.appdemo" level="DEBUG" additivity="false">
             <appender-ref ref="LOG" level="DEBUG"/>
             <appender-ref ref="ERROR" level="ERROR"/>
             <appender-ref ref="CONSOLE" level="DEBUG"/>

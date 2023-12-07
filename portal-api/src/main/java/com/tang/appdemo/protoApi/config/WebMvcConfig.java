@@ -1,6 +1,6 @@
-package com.tang.appdemo.config;
+package com.tang.appdemo.protoApi.config;
 
-import com.tang.appdemo.interceptor.LoginInterceptor;
+import com.tang.appdemo.protoApi.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -20,6 +20,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(loginInterceptor);
     }
 }

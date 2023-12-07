@@ -1,7 +1,9 @@
 package com.tang.appdemo.service;
 
 import com.tang.appdemo.repository.model.dto.LoginDto;
+import com.tang.appdemo.repository.model.po.User;
 import com.tang.appdemo.repository.model.vo.LoginVo;
+import com.tang.appdemo.repository.model.vo.UserInfoVo;
 
 /**
  * @description
@@ -9,7 +11,9 @@ import com.tang.appdemo.repository.model.vo.LoginVo;
  * @author tanghx
  * @date 2023/12/4 15:23
  */
-public interface LoginService {
+public interface UserService {
 
     LoginVo login(LoginDto loginDto);
+
+    UserInfoVo getUserInfo(String token);
 }
