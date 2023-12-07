@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "com.tang.appdemo")
 public class ProtoApiApplication {
     public static void main(String[] args) {
-        log.info("启动···");
+        log.info("启动 ---");
         SpringApplication.run(ProtoApiApplication.class, args);
     }
 }

@@ -1,4 +1,4 @@
-package com.tang.appdemo.interceptor;
+package com.tang.appdemo.protoApi.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.tang.appdemo.common.exception.ErrorCode;

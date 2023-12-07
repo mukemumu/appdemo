@@ -8,6 +8,7 @@ import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.po.User;
 import com.tang.appdemo.repository.model.vo.LoginVo;
 import com.tang.appdemo.service.LoginService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,8 @@ import java.util.concurrent.TimeUnit;
  * @description
  * @date 2023/12/4 15:23
  */
+
+@Slf4j
 @Service
 public class LoginServiceImpl implements LoginService {
 

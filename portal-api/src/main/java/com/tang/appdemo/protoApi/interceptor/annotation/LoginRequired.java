@@ -1,4 +1,4 @@
-package com.tang.appdemo.interceptor.annotation;
+package com.tang.appdemo.protoApi.interceptor.annotation;
 
 import java.lang.annotation.*;
 
