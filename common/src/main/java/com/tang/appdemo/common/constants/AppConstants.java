@@ -1,5 +1,7 @@
 package com.tang.appdemo.common.constants;
 
+import java.util.Locale;
+
 /**
  * @author tanghx
  * @description
@@ -10,5 +12,11 @@ public class AppConstants {
     // redis 中的 token 前缀
     public static final String REDIS_TOKEN_PREFIX = "user.login.token:";
 
+    // RequestContextHolder 中登陆用户信息属性名
     public static final String RESULT_USER = "Result_user:";
+
+    //
+    public static final Locale LOCALE = new Locale("zh", "CN");
+
+    public static final String ERROR_CODE_PREFIX = "error.code.";
 }

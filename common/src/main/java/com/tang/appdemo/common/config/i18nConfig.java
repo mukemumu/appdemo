@@ -2,12 +2,15 @@ package com.tang.appdemo.common.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -24,7 +27,10 @@ import java.util.Locale;
  */
 
 @Configuration
-public class i18nConfig implements WebMvcConfigurer {
+public class i18nConfig{
+
+    @Value(value = "spring.message")
+    private String baseName;
 
     /**
      * 加载 message.properties 文件
@@ -32,9 +38,9 @@ public class i18nConfig implements WebMvcConfigurer {
      * @return
      */
     @Bean(name = "messageSource")
-    public ReloadableResourceBundleMessageSource messageSource() {
+    public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        messageSource.setBasename("classpath:i18n/message");
+        messageSource.setBasename(baseName);
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }
@@ -49,19 +55,5 @@ public class i18nConfig implements WebMvcConfigurer {
             @Autowired @Qualifier("messageSource") MessageSource messageSource) {
         MessageSourceAccessor messageSourceAccessor = new MessageSourceAccessor(messageSource);
         return messageSourceAccessor;
-    }
-
-    @Bean
-    public LocaleResolver localeResolver() {
-        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-        sessionLocaleResolver.setDefaultLocale(Locale.US);
-        return sessionLocaleResolver;
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-        localeChangeInterceptor.setParamName("en");
-        registry.addInterceptor(localeChangeInterceptor);
     }
 }

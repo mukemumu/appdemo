@@ -1,6 +1,3 @@
-F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\interceptor\LoginInterceptor.java
-F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\service\LoginService.java
-F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\config\WebMvcConfig.java
-F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\interceptor\annotation\LoginRequired.java
+F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\service\UserService.java
+F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\service\impl\UserServiceImpl.java
 F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\ServiceApplication.java
-F:\Git-repository\appdemo-be\service\src\main\java\com\tang\appdemo\service\impl\LoginServiceImpl.java

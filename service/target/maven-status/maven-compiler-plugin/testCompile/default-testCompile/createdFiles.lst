@@ -1,2 +1,3 @@
 com\tang\appdemo\impl\MD5Test.class
-com\tang\appdemo\service\LoginServiceTest.class
+com\tang\appdemo\service\UserServiceTest.class
+com\tang\appdemo\message\MessageTest.class

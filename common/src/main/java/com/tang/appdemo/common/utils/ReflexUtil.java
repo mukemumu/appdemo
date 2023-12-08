@@ -14,7 +14,7 @@ public class ReflexUtil {
 
 
     /**
-     * 通过处理器方法获取类或方法上是否存在指定的注解类型
+     * 通过 HandlerMethod 获取类或方法上是否存在指定的注解类型
      * @param handlerMethod
      * @param annotationClass
      * @return

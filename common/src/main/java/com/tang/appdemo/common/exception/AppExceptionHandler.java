@@ -20,14 +20,14 @@ public class AppExceptionHandler {
     @ResponseBody
     @ExceptionHandler(Exception.class)
     public Result<Exception> exception(Exception e){
-        log.error(ErrorCode.SYSTEM_ERROR.getI18nKey());
-        return Result.builder(e,e.getMessage(),500);
+        log.error(e.toString());
+        return Result.builder(e,e.getMessage());
     }
 
     @ResponseBody
     @ExceptionHandler(LoginException.class)
     public Result loginException(LoginException e){
-        log.error(e.getErrorCode().getI18nKey());
+        log.error(e.toString());
         return Result.builder(e, e.getErrorCode());
     }
 }

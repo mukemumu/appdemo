@@ -1,0 +1,869 @@
+2023-12-08 14:59:39.776 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 31020 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 14:59:39.788 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 14:59:39.791 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 14:59:40.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 14:59:40.937 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 14:59:40.985 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-12-08 14:59:41.118 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 14:59:41.817 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 14:59:41.830 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 14:59:41.832 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 14:59:41.833 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 14:59:41.973 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 14:59:41.973 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2119 ms
+2023-12-08 14:59:42.862 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 14:59:42.886 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 14:59:42.918 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 14:59:42.944 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.protoApi.ProtoApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
+	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+2023-12-08 15:01:04.821 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 28336 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:01:04.832 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:01:04.835 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:01:05.903 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:01:05.907 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:01:05.955 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:01:06.099 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:01:06.879 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:01:06.894 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:01:06.896 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:01:06.897 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:01:07.026 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:01:07.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2126 ms
+2023-12-08 15:01:07.817 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:01:07.839 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 15:01:07.870 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 15:01:07.908 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.protoApi.ProtoApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
+	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+2023-12-08 15:01:30.365 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 19796 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:01:30.377 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:01:30.380 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:01:31.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:01:31.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:01:31.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:01:31.686 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:01:32.433 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:01:32.447 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:01:32.449 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:01:32.449 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:01:32.581 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:01:32.582 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2123 ms
+2023-12-08 15:01:33.510 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:01:33.532 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 15:01:33.563 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 15:01:33.589 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.protoApi.ProtoApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
+	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+2023-12-08 15:01:59.826 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 2532 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:01:59.840 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:01:59.843 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:02:00.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:02:00.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:02:01.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:02:01.149 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:02:01.952 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:02:01.964 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:02:01.965 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:02:01.966 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:02:02.099 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:02:02.099 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2190 ms
+2023-12-08 15:02:02.908 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:02:02.933 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 15:02:02.962 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 15:02:02.989 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.protoApi.ProtoApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
+	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:198) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 17 more
+2023-12-08 15:03:27.453 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 22704 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:03:27.467 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:03:27.469 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:03:28.559 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:03:28.563 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:03:28.616 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:03:28.771 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:03:29.482 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:03:29.495 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:03:29.497 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:03:29.497 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:03:29.631 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:03:29.631 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2101 ms
+2023-12-08 15:03:31.162 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:03:31.218 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:03:31.232 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.634 seconds (process running for 6.096)
+2023-12-08 15:03:47.063 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:03:47.064 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:03:47.066 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:03:47.428 [http-nio-8501-exec-2] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-08 15:03:49.323 [http-nio-8501-exec-2] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53d107c4
+2023-12-08 15:03:49.326 [http-nio-8501-exec-2] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-08 15:09:43.978 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-08 15:09:44.001 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-08 15:09:50.949 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 27172 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:09:50.961 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:09:50.963 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:09:52.032 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:09:52.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:09:52.084 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:09:52.221 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:09:52.964 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:09:52.979 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:09:52.980 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:09:52.981 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:09:53.137 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:09:53.138 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2110 ms
+2023-12-08 15:09:54.609 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:09:54.643 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:09:54.656 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.63 seconds (process running for 6.146)
+2023-12-08 15:10:05.667 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:10:05.668 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:10:05.669 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:10:50.367 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 31708 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:10:50.378 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:10:50.380 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:10:51.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:10:51.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:10:51.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:10:51.639 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:10:52.379 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:10:52.391 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:10:52.392 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:10:52.393 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:10:52.540 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:10:52.541 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2097 ms
+2023-12-08 15:10:54.034 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:10:54.065 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:10:54.080 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.606 seconds (process running for 6.138)
+2023-12-08 15:11:17.289 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:11:17.289 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:11:17.291 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:12:02.278 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 16336 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:12:02.289 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:12:02.291 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:12:03.342 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:12:03.346 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:12:03.399 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:12:03.544 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:12:04.356 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:12:04.369 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:12:04.371 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:12:04.372 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:12:04.502 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:12:04.503 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2149 ms
+2023-12-08 15:12:05.819 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:12:05.851 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:12:05.864 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.556 seconds (process running for 6.058)
+2023-12-08 15:12:11.279 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:12:11.279 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:12:11.280 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:12:12.281 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'en_US'.
+2023-12-08 15:14:21.168 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 5084 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:14:21.181 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:14:21.183 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:14:22.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:14:22.396 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:14:22.446 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:14:22.618 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:14:23.486 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:14:23.499 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:14:23.500 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:14:23.500 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:14:23.653 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:14:23.654 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2398 ms
+2023-12-08 15:14:25.079 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:14:25.107 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:14:25.119 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.96 seconds (process running for 6.378)
+2023-12-08 15:14:29.871 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:14:29.871 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:14:29.873 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 0 ms
+2023-12-08 15:14:30.836 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:15:15.121 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 14524 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:15:15.133 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:15:15.135 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:15:16.161 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:15:16.165 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:15:16.210 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:15:16.356 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:15:17.147 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:15:17.164 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:15:17.167 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:15:17.169 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:15:17.307 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:15:17.307 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2109 ms
+2023-12-08 15:15:18.635 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:15:18.666 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:15:18.677 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.411 seconds (process running for 5.793)
+2023-12-08 15:15:24.623 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:15:24.624 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:15:24.625 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:15:25.594 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:19:12.021 [http-nio-8501-exec-5] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:19:22.258 [http-nio-8501-exec-6] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:19:32.674 [http-nio-8501-exec-7] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:19:37.876 [http-nio-8501-exec-4] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 15:27:18.018 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 30564 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:27:18.033 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:27:18.035 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:27:19.410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:27:19.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:27:19.474 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:27:19.646 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:27:22.066 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:27:22.143 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:27:22.146 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:27:22.147 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:27:22.400 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:27:22.404 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4293 ms
+2023-12-08 15:27:24.738 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:27:24.773 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:27:24.790 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 8.111 seconds (process running for 10.33)
+2023-12-08 15:27:53.537 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:27:53.537 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:27:53.539 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-08 15:27:54.538 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'en_US'.
+2023-12-08 15:30:54.342 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 6136 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:30:54.353 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:30:54.356 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:30:55.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:30:55.391 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:30:55.442 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:30:55.594 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:30:56.329 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:30:56.346 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:30:56.347 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:30:56.348 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:30:56.495 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:30:56.496 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2073 ms
+2023-12-08 15:30:57.397 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageSourceAccessor' defined in class path resource [com/tang/appdemo/common/config/i18nConfig.class]: Unsatisfied dependency expressed through method 'messageSourceAccessor' parameter 0: No qualifying bean of type 'org.springframework.context.MessageSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier("i18MessageSource")}
+2023-12-08 15:30:57.419 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 15:30:57.451 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 15:30:57.579 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method messageSourceAccessor in com.tang.appdemo.common.config.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+	- @org.springframework.beans.factory.annotation.Qualifier("i18MessageSource")
+
+The following candidates were found but could not be injected:
+	- User-defined bean method 'messageSource' in 'i18nConfig'
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.context.MessageSource' in your configuration.
+
+2023-12-08 15:31:24.349 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 5036 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:31:24.360 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:31:24.362 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:31:25.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:31:25.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:31:25.533 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:31:25.690 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:31:26.433 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:31:26.448 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:31:26.451 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:31:26.452 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:31:26.595 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:31:26.595 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2171 ms
+2023-12-08 15:31:27.535 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'messageSourceAccessor' defined in class path resource [com/tang/appdemo/common/config/i18nConfig.class]: Unsatisfied dependency expressed through method 'messageSourceAccessor' parameter 0: No qualifying bean of type 'org.springframework.context.MessageSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier("i18MessageSource")}
+2023-12-08 15:31:27.558 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 15:31:27.590 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 15:31:27.644 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method messageSourceAccessor in com.tang.appdemo.common.config.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+	- @org.springframework.beans.factory.annotation.Qualifier("i18MessageSource")
+
+The following candidates were found but could not be injected:
+	- User-defined bean method 'messageSource' in 'i18nConfig'
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'org.springframework.context.MessageSource' in your configuration.
+
+2023-12-08 15:32:04.864 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 19716 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:32:04.875 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:32:04.876 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:32:06.025 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:32:06.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:32:06.080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:32:06.223 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:32:07.003 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:32:07.018 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:32:07.019 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:32:07.020 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:32:07.162 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:32:07.163 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2223 ms
+2023-12-08 15:32:08.975 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:32:09.004 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:32:09.018 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 5.142 seconds (process running for 6.781)
+2023-12-08 15:32:34.003 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:32:34.004 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:32:34.006 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-08 15:32:35.128 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'en_US'.
+2023-12-08 15:50:05.229 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 28444 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:50:05.240 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:50:05.242 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:50:06.432 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:50:06.437 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:50:06.485 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:50:06.630 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:50:07.395 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:50:07.410 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:50:07.412 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:50:07.413 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:50:07.553 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:50:07.554 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2246 ms
+2023-12-08 15:50:08.912 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:50:08.944 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:50:08.957 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.662 seconds (process running for 6.133)
+2023-12-08 15:50:18.973 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 15:50:18.974 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 15:50:18.975 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 15:50:19.996 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "com.tang.appdemo.common.utils.MessageUtils.instance" is null
+2023-12-08 15:51:38.877 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 13792 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 15:51:38.890 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:51:38.892 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:51:39.925 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:51:39.929 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:51:39.971 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:51:40.109 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:51:40.916 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 15:51:40.929 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:51:40.931 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 15:51:40.932 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 15:51:41.063 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 15:51:41.064 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2107 ms
+2023-12-08 15:51:42.483 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 15:51:42.509 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 15:51:42.521 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.637 seconds (process running for 6.063)
+2023-12-08 16:21:15.879 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 12072 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:21:15.891 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:21:15.893 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:21:16.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:21:16.937 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:21:16.988 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:21:17.141 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:21:17.906 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:21:17.921 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:21:17.924 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:21:17.925 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:21:18.059 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:21:18.060 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2102 ms
+2023-12-08 16:21:19.459 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:21:19.490 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:21:19.505 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.507 seconds (process running for 6.06)
+2023-12-08 16:21:23.340 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:21:23.341 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:21:23.343 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:21:24.333 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "com.tang.appdemo.common.utils.MessageUtils.instance" is null
+2023-12-08 16:26:01.074 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 1972 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:26:01.084 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:26:01.086 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:26:02.220 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:26:02.224 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:26:02.268 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:26:02.411 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:26:03.126 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:26:03.139 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:26:03.141 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:26:03.142 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:26:03.262 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:26:03.263 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2111 ms
+2023-12-08 16:26:04.612 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:26:04.644 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:26:04.657 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.447 seconds (process running for 5.812)
+2023-12-08 16:26:10.597 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:26:10.598 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:26:10.599 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:26:11.587 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'en'.
+2023-12-08 16:26:27.443 [http-nio-8501-exec-4] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale ''.
+2023-12-08 16:26:34.199 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh'.
+2023-12-08 16:27:48.054 [http-nio-8501-exec-7] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale ''.
+2023-12-08 16:29:36.648 [http-nio-8501-exec-9] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'cn'.
+2023-12-08 16:29:52.850 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:29:55.279 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:32:34.644 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 27916 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:32:34.657 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:32:34.659 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:32:35.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:32:35.804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:32:35.849 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:32:35.998 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:32:36.801 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:32:36.814 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:32:36.815 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:32:36.817 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:32:36.973 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:32:36.974 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2249 ms
+2023-12-08 16:32:38.318 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:32:38.348 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:32:38.360 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.599 seconds (process running for 6.014)
+2023-12-08 16:35:21.254 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:35:21.254 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:35:21.256 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:35:22.200 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:38:35.876 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 12616 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:38:35.888 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:38:35.890 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:38:36.942 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:38:36.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:38:36.998 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:38:37.147 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:38:37.932 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:38:37.948 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:38:37.950 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:38:37.952 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:38:38.082 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:38:38.083 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2129 ms
+2023-12-08 16:38:39.497 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:38:39.529 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:38:39.544 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.691 seconds (process running for 6.216)
+2023-12-08 16:38:43.185 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:38:43.186 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:38:43.187 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:38:44.136 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:39:11.847 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 17636 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:39:11.859 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:39:11.862 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:39:12.936 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:39:12.940 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:39:12.987 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:39:13.134 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:39:13.920 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:39:13.937 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:39:13.940 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:39:13.941 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:39:14.095 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:39:14.096 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2165 ms
+2023-12-08 16:39:15.549 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:39:15.579 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:39:15.591 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.692 seconds (process running for 6.179)
+2023-12-08 16:39:18.920 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:39:18.921 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:39:18.922 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:39:19.874 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:46:15.309 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 9020 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:46:15.322 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:46:15.324 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:46:16.465 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:46:16.471 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:46:16.527 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:46:16.688 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:46:17.490 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:46:17.504 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:46:17.507 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:46:17.508 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:46:17.650 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:46:17.651 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2256 ms
+2023-12-08 16:46:18.536 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'i18nMessageSource' defined in class path resource [com/tang/appdemo/common/config/i18nConfig.class]: Failed to instantiate [org.springframework.context.MessageSource]: Factory method 'messageSource' threw exception with message: Basename must not be empty
+2023-12-08 16:46:18.562 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-08 16:46:18.597 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-08 16:46:18.701 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'i18nMessageSource' defined in class path resource [com/tang/appdemo/common/config/i18nConfig.class]: Failed to instantiate [org.springframework.context.MessageSource]: Factory method 'messageSource' threw exception with message: Basename must not be empty
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:491) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.protoApi.ProtoApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.MessageSource]: Factory method 'messageSource' threw exception with message: Basename must not be empty
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 19 more
+Caused by: java.lang.IllegalArgumentException: Basename must not be empty
+	at org.springframework.util.Assert.hasText(Assert.java:294) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractResourceBasedMessageSource.addBasenames(AbstractResourceBasedMessageSource.java:102) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractResourceBasedMessageSource.setBasenames(AbstractResourceBasedMessageSource.java:87) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractResourceBasedMessageSource.setBasename(AbstractResourceBasedMessageSource.java:66) ~[spring-context-6.0.7.jar:6.0.7]
+	at com.tang.appdemo.common.config.i18nConfig.messageSource(i18nConfig.java:43) ~[classes/:?]
+	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$0.CGLIB$messageSource$0(<generated>) ~[classes/:?]
+	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.7.jar:6.0.7]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.7.jar:6.0.7]
+	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$0.messageSource(<generated>) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 19 more
+2023-12-08 16:48:18.853 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 2284 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:48:18.870 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:48:18.873 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:48:19.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:48:19.938 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:48:19.987 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:48:20.122 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:48:20.848 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:48:20.860 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:48:20.862 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:48:20.864 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:48:20.989 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:48:20.990 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2048 ms
+2023-12-08 16:48:22.339 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:48:22.372 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:48:22.385 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.382 seconds (process running for 5.808)
+2023-12-08 16:48:26.414 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:48:26.415 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:48:26.416 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:48:27.462 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:50:09.382 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 16816 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 16:50:09.396 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 16:50:09.398 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 16:50:10.404 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 16:50:10.407 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 16:50:10.458 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-08 16:50:10.601 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:50:11.318 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 16:50:11.330 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:50:11.331 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 16:50:11.332 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 16:50:11.463 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 16:50:11.464 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2002 ms
+2023-12-08 16:50:12.775 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 16:50:12.805 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 16:50:12.818 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.32 seconds (process running for 5.789)
+2023-12-08 16:50:20.113 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 16:50:20.113 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 16:50:20.114 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 16:50:21.069 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 16:55:01.140 [http-nio-8501-exec-5] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 17:00:57.620 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 29052 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:00:57.633 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:00:57.635 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:00:58.694 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:00:58.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:00:58.741 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:00:58.873 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:00:59.600 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:00:59.612 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:00:59.614 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:00:59.615 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:00:59.752 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:00:59.752 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2054 ms
+2023-12-08 17:01:01.107 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:01:01.142 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:01:01.156 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.421 seconds (process running for 5.799)
+2023-12-08 17:01:06.354 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 17:01:06.354 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 17:01:06.356 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 17:01:07.366 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 17:01:41.729 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 28512 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:01:41.741 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:01:41.743 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:01:42.750 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:01:42.754 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:01:42.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:01:42.950 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:01:43.676 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:01:43.688 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:01:43.689 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:01:43.690 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:01:43.821 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:01:43.821 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2016 ms
+2023-12-08 17:01:45.234 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:01:45.268 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:01:45.281 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.437 seconds (process running for 5.884)
+2023-12-08 17:02:13.795 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 31528 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:02:13.809 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:02:13.812 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:02:14.870 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:02:14.875 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:02:14.931 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:02:15.091 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:02:15.839 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:02:15.852 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:02:15.853 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:02:15.853 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:02:15.994 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:02:15.994 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2115 ms
+2023-12-08 17:02:17.325 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:02:17.359 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:02:17.375 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.582 seconds (process running for 6.112)
+2023-12-08 17:03:09.656 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 31140 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:03:09.669 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:03:09.671 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:03:10.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:03:10.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:03:10.892 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:03:11.035 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:03:11.770 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:03:11.783 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:03:11.785 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:03:11.787 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:03:11.927 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:03:11.928 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2188 ms
+2023-12-08 17:03:13.319 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:03:13.347 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:03:13.360 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.601 seconds (process running for 6.065)
+2023-12-08 17:06:18.170 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 2516 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:06:18.181 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:06:18.183 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:06:19.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:06:19.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:06:19.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:06:19.430 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:06:20.189 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:06:20.202 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:06:20.204 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:06:20.205 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:06:20.342 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:06:20.342 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2098 ms
+2023-12-08 17:06:21.743 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:06:21.772 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:06:21.788 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.507 seconds (process running for 5.967)
+2023-12-08 17:06:35.996 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 8964 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:06:36.007 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:06:36.009 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:06:37.052 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:06:37.058 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:06:37.105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:06:37.275 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:06:38.069 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:06:38.083 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:06:38.084 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:06:38.086 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:06:38.226 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:06:38.227 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2150 ms
+2023-12-08 17:06:39.678 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:06:39.711 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:06:39.725 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.637 seconds (process running for 6.13)
+2023-12-08 17:19:06.118 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 9076 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:19:06.136 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:19:06.138 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:19:07.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:19:07.293 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:19:07.345 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:19:07.521 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:19:08.461 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:19:08.476 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:19:08.478 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:19:08.478 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:19:08.626 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:19:08.626 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2409 ms
+2023-12-08 17:19:10.040 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:19:10.070 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:19:10.084 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.958 seconds (process running for 6.428)
+2023-12-08 17:20:35.021 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 17:20:35.022 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 17:20:35.024 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-08 17:20:36.109 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 17:24:39.952 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 16064 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:24:39.964 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:24:39.965 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:24:41.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:24:41.378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:24:41.431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:24:41.608 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:24:42.595 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:24:42.609 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:24:42.610 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:24:42.611 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:24:42.796 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:24:42.798 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2754 ms
+2023-12-08 17:24:44.400 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:24:44.432 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:24:44.445 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 5.636 seconds (process running for 7.645)
+2023-12-08 17:24:52.405 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 17:24:52.406 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 17:24:52.407 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-08 17:24:53.509 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 17:33:56.112 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 18492 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-08 17:33:56.127 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:33:56.129 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:33:57.188 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:33:57.192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:33:57.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:33:57.381 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:33:58.088 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-08 17:33:58.100 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:33:58.102 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-08 17:33:58.102 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-08 17:33:58.236 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-08 17:33:58.237 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2040 ms
+2023-12-08 17:33:59.045 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 17:33:59.594 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-08 17:33:59.624 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-08 17:33:59.639 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.361 seconds (process running for 5.949)
+2023-12-08 17:34:05.274 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08 17:34:05.275 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-08 17:34:05.277 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-08 17:34:06.283 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
+2023-12-08 17:34:20.942 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.

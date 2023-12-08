@@ -1,2 +1,5 @@
+com\tang\appdemo\protoApi\interceptor\LoginInterceptor.class
 com\tang\appdemo\protoApi\ProtoApiApplication.class
-com\tang\appdemo\protoApi\controller\LoginController.class
+com\tang\appdemo\protoApi\config\WebMvcConfig.class
+com\tang\appdemo\protoApi\interceptor\annotation\LoginRequired.class
+com\tang\appdemo\protoApi\controller\UserController.class

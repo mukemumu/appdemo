@@ -91,6 +91,7 @@
                 <artifactId>druid</artifactId>
                 <version>${druid}</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
 </project>

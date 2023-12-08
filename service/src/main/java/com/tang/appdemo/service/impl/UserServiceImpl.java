@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.tang.appdemo.common.constants.AppConstants;
 import com.tang.appdemo.common.exception.ErrorCode;
 import com.tang.appdemo.common.exception.LoginException;
+import com.tang.appdemo.common.utils.MessageUtils;
 import com.tang.appdemo.repository.mapper.UserMapper;
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.po.User;
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
     private RedisTemplate<String, String> redisTemplate;
 
     @Autowired
-    private MessageSource messageSource;
+    private MessageUtils messageUtils;
 
     /**
      * 用户登陆
@@ -88,8 +89,11 @@ public class UserServiceImpl implements UserService {
 
         User user = JSON.parseObject(userInfo, User.class);
 
-        String message = messageSource.getMessage("error.code.1007", null, LocaleContextHolder.getLocale());
-        log.info("提示信息：");
+//        String message = messageSource.getMessage("error.code.1007", null, LocaleContextHolder.getLocale());
+//        log.info("提示信息：");
+
+        String message = messageUtils.getMessage("error.code.1007", LocaleContextHolder.getLocale(), null);
+        System.out.println(message);
 
         return new UserInfoVo(user);
     }

@@ -1,12 +1,35 @@
-2023-12-06 10:25:31.167 [main] INFO  c.t.a.s.LoginServiceTest logStarting - Starting LoginServiceTest using Java 17.0.9 with PID 9028 (started by Thinkpad in F:\Git-repository\appdemo-be\service)
-2023-12-06 10:25:31.217 [main] INFO  c.t.a.s.LoginServiceTest logStartupProfileInfo - The following 1 profile is active: "dev"
-2023-12-06 10:25:33.010 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
-2023-12-06 10:25:33.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-12-06 10:25:33.125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2023-12-06 10:25:33.375 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
-2023-12-06 10:25:36.804 [main] INFO  c.t.a.s.LoginServiceTest logStarted - Started LoginServiceTest in 6.938 seconds (process running for 10.032)
-2023-12-06 10:25:38.145 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
-2023-12-06 10:25:39.176 [main] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@776a7ec6
-2023-12-06 10:25:39.181 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
-2023-12-06 10:25:41.451 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
-2023-12-06 10:25:41.592 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-08 15:08:22.651 [main] INFO  c.t.a.i.MD5Test logStarting - Starting MD5Test using Java 17.0.9 with PID 28916 (started by Thinkpad in F:\Git-repository\appdemo-be\service)
+2023-12-08 15:08:22.690 [main] DEBUG c.t.a.i.MD5Test logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 15:08:22.694 [main] INFO  c.t.a.i.MD5Test logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 15:08:23.977 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 15:08:23.984 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 15:08:24.055 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2023-12-08 15:08:24.315 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:08:27.171 [main] INFO  c.t.a.i.MD5Test logStarted - Started MD5Test in 5.558 seconds (process running for 7.752)
+2023-12-08 15:08:28.164 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.tang.appdemo.message.MessageTest]: MessageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-08 15:08:28.178 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper getOrFindConfigurationClasses - Found @SpringBootConfiguration com.tang.appdemo.ServiceApplication for test class com.tang.appdemo.message.MessageTest
+2023-12-08 15:08:28.202 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.tang.appdemo.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-08 15:08:28.215 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper getOrFindConfigurationClasses - Found @SpringBootConfiguration com.tang.appdemo.ServiceApplication for test class com.tang.appdemo.service.UserServiceTest
+2023-12-08 15:08:28.283 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-08 15:08:28.734 [main] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a0ee80
+2023-12-08 15:08:28.737 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-08 15:08:30.486 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-08 15:08:30.505 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-08 17:36:03.035 [main] INFO  c.t.a.i.MD5Test logStarting - Starting MD5Test using Java 17.0.9 with PID 27892 (started by Thinkpad in F:\Git-repository\appdemo-be\service)
+2023-12-08 17:36:03.046 [main] DEBUG c.t.a.i.MD5Test logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-08 17:36:03.048 [main] INFO  c.t.a.i.MD5Test logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-08 17:36:04.338 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-08 17:36:04.344 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-08 17:36:04.401 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-12-08 17:36:04.643 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:36:06.541 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 17:36:07.624 [main] INFO  c.t.a.i.MD5Test logStarted - Started MD5Test in 5.34 seconds (process running for 7.794)
+2023-12-08 17:36:08.663 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.tang.appdemo.message.MessageTest]: MessageTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-08 17:36:08.674 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper getOrFindConfigurationClasses - Found @SpringBootConfiguration com.tang.appdemo.ServiceApplication for test class com.tang.appdemo.message.MessageTest
+2023-12-08 17:36:08.693 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils detectDefaultConfigurationClasses - Could not detect default configuration classes for test class [com.tang.appdemo.service.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-12-08 17:36:08.705 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper getOrFindConfigurationClasses - Found @SpringBootConfiguration com.tang.appdemo.ServiceApplication for test class com.tang.appdemo.service.UserServiceTest
+2023-12-08 17:36:08.776 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-08 17:36:09.332 [main] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@599310ab
+2023-12-08 17:36:09.338 [main] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-08 17:36:11.318 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-08 17:36:11.330 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.

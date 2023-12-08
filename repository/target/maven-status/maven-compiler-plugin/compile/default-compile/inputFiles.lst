@@ -4,5 +4,6 @@ F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repositor
 F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\model\dto\LoginDto.java
 F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\RepositoryApplication.java
 F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\model\vo\LoginVo.java
+F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\model\vo\UserInfoVo.java
 F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\model\po\BaseEntity.java
 F:\Git-repository\appdemo-be\repository\src\main\java\com\tang\appdemo\repository\model\po\User.java

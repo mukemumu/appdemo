@@ -9,7 +9,7 @@ spring:
       host: localhost
       port: 6379
   messages:
-    basename: classpath:/i18n/message.properties
+    basename: i18n/message
 
 mybatis:
   config-location: classpath:/mybatis-config.xml

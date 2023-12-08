@@ -1,2 +1,5 @@
-F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\controller\LoginController.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\config\WebMvcConfig.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\interceptor\LoginInterceptor.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\ProtoApiApplication.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\controller\UserController.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\protoApi\interceptor\annotation\LoginRequired.java
