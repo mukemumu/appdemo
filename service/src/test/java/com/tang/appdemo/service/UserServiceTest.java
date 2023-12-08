@@ -2,6 +2,7 @@ package com.tang.appdemo.service;
 
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.vo.LoginVo;
+import com.tang.appdemo.service.user.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

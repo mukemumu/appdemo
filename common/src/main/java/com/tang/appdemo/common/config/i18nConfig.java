@@ -1,5 +1,6 @@
 package com.tang.appdemo.common.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,11 +26,11 @@ import java.util.Locale;
  * @author tanghx
  * @date 2023/12/6 15:48
  */
-
+@Slf4j
 @Configuration
 public class i18nConfig{
 
-    @Value(value = "spring.message")
+    @Value("${spring.messages.basename}")
     private String baseName;
 
     /**
@@ -40,6 +41,7 @@ public class i18nConfig{
     @Bean(name = "messageSource")
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
+        log.warn("messageSource baseName: " + baseName);
         messageSource.setBasename(baseName);
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;

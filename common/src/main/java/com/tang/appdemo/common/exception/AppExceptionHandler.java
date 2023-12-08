@@ -20,14 +20,14 @@ public class AppExceptionHandler {
     @ResponseBody
     @ExceptionHandler(Exception.class)
     public Result<Exception> exception(Exception e){
-        log.error(e.toString());
+        log.error("AppExceptionHandler, exception", e);
         return Result.builder(e,e.getMessage());
     }
 
     @ResponseBody
     @ExceptionHandler(LoginException.class)
     public Result loginException(LoginException e){
-        log.error(e.toString());
+        log.error("AppExceptionHandler, loginException", e);
         return Result.builder(e, e.getErrorCode());
     }
 }
