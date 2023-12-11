@@ -15,8 +15,10 @@ public class AppConstants {
     // RequestContextHolder 中登陆用户信息属性名
     public static final String RESULT_USER = "Result_user:";
 
-    //
-    public static final Locale LOCALE = new Locale("zh", "CN");
-
+    // 异常信息码前缀
     public static final String ERROR_CODE_PREFIX = "error.code.";
+
+    public static final String ACCEPT_LANGUAGE = "Accept-Language";
+
+
 }

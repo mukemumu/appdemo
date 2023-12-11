@@ -1,4 +1,4 @@
-package com.tang.appdemo.common.utils;
+package com.tang.appdemo.portalapi.utils;
 
 import org.springframework.web.method.HandlerMethod;
 

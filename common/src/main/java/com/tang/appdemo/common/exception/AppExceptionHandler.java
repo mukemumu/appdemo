@@ -1,6 +1,7 @@
 package com.tang.appdemo.common.exception;
 
 
+import com.tang.appdemo.common.constants.AppConstants;
 import com.tang.appdemo.common.result.Result;
 import com.tang.appdemo.common.utils.MessageUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -36,9 +37,11 @@ public class AppExceptionHandler {
         log.error("AppExceptionHandler, loginException", e);
 
         String message = messageUtils.getMessage(
-                e.getErrorCode().getI18nKey(),
+                AppConstants.ERROR_CODE_PREFIX + e.getErrorCode().getAppCode(),
                 LocaleContextHolder.getLocale(),
                 null);
+
+        log.info("异常信息：" + message);
 
         Integer code = e.getErrorCode().getAppCode();
 

@@ -1,8 +1,11 @@
 package com.tang.appdemo.portalapi.interceptor;
 
+import com.mysql.cj.util.StringUtils;
 import com.tang.appdemo.common.constants.AppConstants;
+import com.tang.appdemo.common.exception.ErrorCode;
+import com.tang.appdemo.common.exception.LoginException;
 import com.tang.appdemo.common.utils.LoginContextUtil;
-import com.tang.appdemo.common.utils.ReflexUtil;
+import com.tang.appdemo.portalapi.utils.ReflexUtil;
 import com.tang.appdemo.portalapi.interceptor.annotation.LoginRequired;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -51,6 +54,10 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         String token = request.getHeader("token");
         String userInfo = redisTemplate.opsForValue().get(AppConstants.REDIS_TOKEN_PREFIX + token);
+
+        if (StringUtils.isNullOrEmpty(userInfo)){
+            throw new LoginException(ErrorCode.LOGIN_AUTH);
+        }
 
         // 将完成登陆的用户放入 RequestContextHolder 中
         RequestContextHolder.currentRequestAttributes().setAttribute(AppConstants.RESULT_USER, userInfo, RequestAttributes.SCOPE_REQUEST);

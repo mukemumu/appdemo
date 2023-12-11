@@ -1,4 +1,4 @@
-package com.tang.appdemo.common.utils;
+package com.tang.appdemo.portalapi.utils;
 
 import com.tang.appdemo.common.CommonApplication;
 import com.tang.appdemo.common.constants.AppConstants;
@@ -44,7 +44,7 @@ public class RequestComponent {
      * 获取 Locale
      * @return
      */
-    public Locale getLocale() {
-        return AppConstants.LOCALE;
-    }
+//    public Locale getLocale() {
+//        return AppConstants.LOCALE;
+//    }
 }

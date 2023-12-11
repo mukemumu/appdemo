@@ -20,22 +20,6 @@ public enum ErrorCode {
 
     SUCCESS(HttpStatus.OK.value(),200),
 
-    LOGIN_ERROR_PASSWORD(HttpStatus.BAD_REQUEST.value(),1001),
-
-    LOGIN_ERROR_USERNAME(HttpStatus.BAD_REQUEST.value(),1001),
-
-    VALIDATE_CODE_ERROR(HttpStatus.BAD_REQUEST.value(),1010) ,
-
-    LOGIN_AUTH(HttpStatus.FOUND.value(), 1002),
-
-    USER_NAME_IS_EXISTS(HttpStatus.BAD_REQUEST.value(), 1008),
-
-    SYSTEM_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1002),
-
-    NODE_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), 500),
-
-    ACCOUNT_STOP(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1003),
-
     BAD_REQUEST(HttpStatus.BAD_REQUEST.value(),400),
 
     UNAUTHORIZED(HttpStatus.UNAUTHORIZED.value(),401),
@@ -50,13 +34,23 @@ public enum ErrorCode {
 
     UNSUPPORTED_MEDIA_TYPE(HttpStatus.UNSUPPORTED_MEDIA_TYPE.value(),415),
 
-    BIZ_UNKNOWN_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1000),
+    NODE_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), 500),
 
-    UPDATE_PASSWORD_OLD_PASSWORD_NOT_MATCH(HttpStatus.BAD_REQUEST.value(), 1008),
+    LOGIN_ERROR_PASSWORD(HttpStatus.BAD_REQUEST.value(),1000),
+
+    LOGIN_ERROR_USERNAME(HttpStatus.BAD_REQUEST.value(),1001),
+
+    LOGIN_AUTH(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1002),
+
+    ACCOUNT_STOP(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1003),
 
     UPDATE_PASSWORD_NEW_PASSWORD_CONFIRM_NOT_MATCH(HttpStatus.BAD_REQUEST.value(),1009),
 
-    UPDATE_PASSWORD_NEW_PASSWORD_LENGTH_NOT_OK(HttpStatus.BAD_REQUEST.value(),1010);
+    VALIDATE_CODE_ERROR(HttpStatus.BAD_REQUEST.value(),1011) ,
+
+    UPDATE_PASSWORD_NEW_PASSWORD_LENGTH_NOT_OK(HttpStatus.BAD_REQUEST.value(),1010),
+
+    USER_REPEAT(HttpStatus.BAD_REQUEST.value(), 1013);
 
     private int httpStatus;         // http 响应码
 

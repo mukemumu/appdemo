@@ -14,4 +14,10 @@ public interface UserMapper {
     User findUserByUsername(String username);
 
     User findUserById(Long userId);
+
+    void saveUser(User user);
+
+    void updateUserById(User user);
+
+    void deleteById(Long id);
 }

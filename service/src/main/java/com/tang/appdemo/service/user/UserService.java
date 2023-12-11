@@ -16,4 +16,10 @@ public interface UserService {
     LoginVo login(LoginDto loginDto);
 
     UserInfoVo getUserInfo(String token);
+
+    void saveUser(User user);
+
+    void updateUser(User user);
+
+    void deleteById(Long id);
 }

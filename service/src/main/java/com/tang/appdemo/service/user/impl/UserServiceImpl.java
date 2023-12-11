@@ -1,6 +1,7 @@
 package com.tang.appdemo.service.user.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.mysql.cj.util.StringUtils;
 import com.tang.appdemo.common.constants.AppConstants;
 import com.tang.appdemo.common.exception.ErrorCode;
 import com.tang.appdemo.common.exception.LoginException;
@@ -82,7 +83,7 @@ public class UserServiceImpl implements UserService {
                 .getRequestAttributes()
                 .getAttribute(AppConstants.RESULT_USER, RequestAttributes.SCOPE_REQUEST);
 
-        if ("".equals(userInfo)) {
+        if (StringUtils.isNullOrEmpty(userInfo)) {
             throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
 
@@ -91,10 +92,44 @@ public class UserServiceImpl implements UserService {
 //        String message = messageSource.getMessage("error.code.1007", null, LocaleContextHolder.getLocale());
 //        log.info("提示信息：");
 
-        String message = messageUtils.getMessage("error.code.1007", LocaleContextHolder.getLocale(), null);
-        log.info("UserServiceImpl getUserInfo user: " + user + ", message: " + message);
+//        String message = messageUtils.getMessage("error.code.1007", LocaleContextHolder.getLocale(), null);
+//        log.info("UserServiceImpl getUserInfo user: " + user + ", message: " + message);
 
         return new UserInfoVo(user);
+    }
+
+    /**
+     * 新增用户
+     * @param user
+     */
+    @Override
+    public void saveUser(User user) {
+
+        // 查询用户是否已经存在
+        User userById = userMapper.findUserById(user.getId());
+
+        if (userById != null){
+            throw new LoginException(ErrorCode.USER_REPEAT);
+        }
+
+        // 密码加密
+        String md5Password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
+        user.setPassword(md5Password);
+        userMapper.saveUser(user);
+    }
+
+    /**
+     * 修改用户信息
+     * @param user
+     */
+    @Override
+    public void updateUser(User user) {
+        userMapper.updateUserById(user);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        userMapper.deleteById(id);
     }
 }
 
