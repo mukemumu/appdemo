@@ -16,11 +16,7 @@ import org.springframework.stereotype.Component;
  * @date 2023/12/4 10:05
  */
 @Data
-@Component
 public class Result<T> {
-
-    @Autowired
-    private static MessageUtils messageUtils;
 
     private Integer code;
 
@@ -37,17 +33,11 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> builder(T data, ErrorCode errorCode){
+    public static <T> Result<T> builder(T data, String message, Integer code){
         Result<T> result = new Result<>();
+        result.setCode(code);
+        result.setMessage(message);
         result.setData(data);
-
-        result.setCode(errorCode.getAppCode());
-
-        result.setMessage(messageUtils.getMessage(
-                AppConstants.ERROR_CODE_PREFIX + errorCode.getAppCode(),
-                LocaleContextHolder.getLocale(),
-                null));
-
         return result;
     }
 }

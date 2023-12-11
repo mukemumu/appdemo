@@ -22,7 +22,7 @@ public class MessageUtils {
     @Autowired
     private MessageSource messageSource;
 
-    public String getMessage(String i18ney, Locale locale, Object... params){
-        return messageSource.getMessage(i18ney,params,locale);
+    public String getMessage(String i18nKey, Locale locale, Object... params){
+        return messageSource.getMessage(i18nKey,params,locale);
     }
 }

@@ -1,3 +1,3 @@
-com\tang\appdemo\service\impl\UserServiceImpl.class
-com\tang\appdemo\service\UserService.class
-com\tang\appdemo\ServiceApplication.class
+com\tang\appdemo\service\ServiceApplication.class
+com\tang\appdemo\service\user\UserService.class
+com\tang\appdemo\service\user\impl\UserServiceImpl.class

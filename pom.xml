@@ -14,6 +14,7 @@
         <module>service</module>
         <module>portal-api</module>
         <module>admin-api</module>
+        <module>task</module>
     </modules>
 
     <parent>
