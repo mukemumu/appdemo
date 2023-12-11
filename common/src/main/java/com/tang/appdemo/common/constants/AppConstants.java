@@ -18,7 +18,9 @@ public class AppConstants {
     // 异常信息码前缀
     public static final String ERROR_CODE_PREFIX = "error.code.";
 
-    public static final String ACCEPT_LANGUAGE = "Accept-Language";
+    public static final String ACCEPT_LANGUAGE = "language";
+
+    public static final String LOCALE = "locale";
 
 
 }

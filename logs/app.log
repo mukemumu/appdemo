@@ -1407,3 +1407,752 @@ com.tang.appdemo.common.exception.LoginException: null
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
 	at java.lang.Thread.run(Thread.java:842) ~[?:?]
 2023-12-11 17:27:02.351 [http-nio-8501-exec-4] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 17:30:04.829 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 2456 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 17:30:04.845 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 17:30:04.846 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 17:30:06.045 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 17:30:07.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 17:30:07.595 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-12-11 17:30:08.170 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 17:30:08.570 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 17:30:08.583 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 17:30:08.585 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 17:30:08.585 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 17:30:08.732 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 17:30:08.736 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3805 ms
+2023-12-11 17:30:10.276 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 17:30:10.312 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 17:30:10.325 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 6.52 seconds (process running for 8.343)
+2023-12-11 17:30:12.962 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 17:30:12.963 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 17:30:12.964 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-11 17:30:13.802 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 17:30:13.825 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 17:31:21.860 [http-nio-8501-exec-7] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 17:31:21.865 [http-nio-8501-exec-7] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 17:31:25.381 [http-nio-8501-exec-6] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-11 17:31:25.766 [http-nio-8501-exec-6] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3399a336
+2023-12-11 17:31:25.770 [http-nio-8501-exec-6] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-11 18:00:23.558 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-11 18:00:23.648 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-11 18:00:34.486 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 1336 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:00:34.501 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:00:34.503 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:00:35.597 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:00:35.602 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:00:35.643 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:00:36.235 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:00:36.585 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:00:36.598 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:00:36.599 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:00:36.600 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:00:36.742 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:00:36.743 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2183 ms
+2023-12-11 18:00:38.177 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:00:38.210 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:00:38.224 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 4.613 seconds (process running for 6.241)
+2023-12-11 18:00:43.802 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:00:43.803 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:00:43.805 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-11 18:00:43.972 [http-nio-8501-exec-2] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-11 18:00:44.270 [http-nio-8501-exec-2] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a28604c
+2023-12-11 18:00:44.272 [http-nio-8501-exec-2] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-11 18:01:07.219 [http-nio-8501-exec-4] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:01:07.234 [http-nio-8501-exec-4] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:01:43.893 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-11 18:01:43.910 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-11 18:01:50.657 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 6024 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:01:50.671 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:01:50.673 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:01:51.786 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:01:51.792 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:01:51.835 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:01:52.369 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:01:52.712 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:01:52.725 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:01:52.727 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:01:52.728 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:01:52.867 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:01:52.868 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2117 ms
+2023-12-11 18:01:54.230 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:01:54.260 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:01:54.271 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 4.523 seconds (process running for 5.949)
+2023-12-11 18:01:58.313 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:01:58.314 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:01:58.316 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:01:59.096 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:01:59.110 [http-nio-8501-exec-3] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:07:36.972 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 9984 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:07:36.992 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:07:36.996 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:07:38.747 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:07:38.756 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:07:38.821 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:07:39.787 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:07:40.295 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:07:40.317 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:07:40.320 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:07:40.321 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:07:40.525 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:07:40.532 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3424 ms
+2023-12-11 18:07:42.720 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:07:42.777 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:07:42.796 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.359 seconds (process running for 9.705)
+2023-12-11 18:07:45.365 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:07:45.366 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:07:45.368 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:07:46.583 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:07:46.610 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：Login token not exists or expired!
+2023-12-11 18:08:28.451 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 8004 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:08:28.474 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:08:28.476 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:08:30.194 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:08:30.200 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:08:30.289 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:08:31.159 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:08:31.778 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:08:31.805 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:08:31.808 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:08:31.809 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:08:32.034 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:08:32.037 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3453 ms
+2023-12-11 18:08:34.186 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:08:34.235 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:08:34.253 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.233 seconds (process running for 9.523)
+2023-12-11 18:08:36.718 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:08:36.719 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:08:36.724 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 4 ms
+2023-12-11 18:08:37.916 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:08:37.938 [http-nio-8501-exec-3] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:09:04.875 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 13676 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:09:04.892 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:09:04.896 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:09:06.604 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:09:06.611 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:09:06.709 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:09:07.724 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:09:08.337 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:09:08.362 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:09:08.365 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:09:08.367 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:09:08.584 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:09:08.588 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3582 ms
+2023-12-11 18:09:10.770 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:09:10.824 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:09:10.844 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.533 seconds (process running for 9.929)
+2023-12-11 18:09:15.207 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:09:15.208 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:09:15.211 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
+2023-12-11 18:09:16.399 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:09:16.423 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:10:14.216 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 12688 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:10:14.243 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:10:14.248 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:10:16.039 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:10:16.044 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:10:16.128 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:10:17.047 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:10:17.629 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:10:17.649 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:10:17.652 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:10:17.654 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:10:17.870 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:10:17.874 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3486 ms
+2023-12-11 18:10:20.563 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:10:20.617 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:10:20.637 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 8.036 seconds (process running for 10.879)
+2023-12-11 18:10:24.516 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:10:24.517 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:10:24.520 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:10:25.819 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:10:25.842 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:10:35.653 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:10:35.659 [http-nio-8501-exec-3] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:11:30.764 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 21444 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:11:30.784 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:11:30.787 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:11:32.606 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:11:32.613 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:11:32.682 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:11:33.703 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:11:34.253 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:11:34.277 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:11:34.279 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:11:34.281 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:11:34.552 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:11:34.553 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3646 ms
+2023-12-11 18:11:36.736 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:11:36.785 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:11:36.803 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.529 seconds (process running for 10.29)
+2023-12-11 18:11:39.445 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:11:39.446 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:11:39.448 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:11:40.735 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:11:40.762 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:12:24.035 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 7432 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:12:24.056 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:12:24.060 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:12:25.831 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:12:25.838 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:12:25.918 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:12:26.781 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:12:27.325 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:12:27.346 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:12:27.349 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:12:27.350 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:12:27.562 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:12:27.568 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3390 ms
+2023-12-11 18:12:29.774 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:12:29.838 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:12:29.859 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.177 seconds (process running for 9.511)
+2023-12-11 18:12:35.686 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:12:35.686 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:12:35.688 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:12:37.112 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:12:37.140 [http-nio-8501-exec-2] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
+2023-12-11 18:12:58.692 [http-nio-8501-exec-4] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-11 18:12:59.238 [http-nio-8501-exec-4] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76aefcc3
+2023-12-11 18:12:59.243 [http-nio-8501-exec-4] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-11 18:13:05.046 [http-nio-8501-exec-3] ERROR c.t.a.p.i.I18nInterceptor preHandle - language:null
+2023-12-11 18:13:11.478 [http-nio-8501-exec-5] ERROR c.t.a.p.i.I18nInterceptor preHandle - language:null
+2023-12-11 18:13:53.107 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-11 18:13:53.142 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-11 18:14:04.235 [main] INFO  c.t.a.p.PortalApiApplication logStarting - Starting PortalApiApplication using Java 17.0.9 with PID 18440 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-11 18:14:04.263 [main] DEBUG c.t.a.p.PortalApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-11 18:14:04.266 [main] INFO  c.t.a.p.PortalApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-11 18:14:06.059 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-11 18:14:06.069 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-11 18:14:06.154 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2023-12-11 18:14:07.039 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-11 18:14:07.726 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-11 18:14:07.750 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:14:07.753 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-11 18:14:07.754 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-11 18:14:08.003 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-11 18:14:08.011 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3627 ms
+2023-12-11 18:14:10.836 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-11 18:14:10.887 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-11 18:14:10.905 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 8.111 seconds (process running for 10.63)
+2023-12-11 18:14:26.261 [http-nio-8501-exec-2] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-11 18:14:26.263 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-11 18:14:26.266 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-11 18:14:26.319 [http-nio-8501-exec-2] ERROR c.t.a.p.i.I18nInterceptor preHandle - language:en_US
+2023-12-11 18:14:38.885 [http-nio-8501-exec-3] ERROR c.t.a.p.i.I18nInterceptor preHandle - language:en_US
+2023-12-11 18:14:38.904 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
+com.tang.appdemo.common.exception.LoginException: null
+	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:537) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.7.jar:6.0.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631) ~[tomcat-embed-core-10.1.7.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.7.jar:6.0.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
+	at java.lang.Thread.run(Thread.java:842) ~[?:?]
+2023-12-11 18:14:38.937 [http-nio-8501-exec-3] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：Login token not exists or expired!

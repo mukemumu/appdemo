@@ -1,7 +1,9 @@
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\LoginInterceptor.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\config\WebMvcConfig.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\annotation\LoginRequired.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\utils\ReflexUtil.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\I18nInterceptor.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\controller\UserController.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\annotation\Language.java
+F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\utils\RequestComponent.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\PortalApiApplication.java

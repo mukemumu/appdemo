@@ -1,6 +1,5 @@
 package com.tang.appdemo.portalapi.controller;
 
-import com.tang.appdemo.portalapi.utils.RequestComponent;
 import com.tang.appdemo.portalapi.interceptor.annotation.Language;
 import com.tang.appdemo.portalapi.interceptor.annotation.LoginRequired;
 import com.tang.appdemo.repository.model.dto.LoginDto;
@@ -31,9 +30,6 @@ public class UserController {
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
-
-    @Autowired
-    private RequestComponent requestComponent;
 
     /**
      * 用户登陆

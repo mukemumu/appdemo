@@ -21,11 +21,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private LoginInterceptor loginInterceptor;
 
+    @Autowired
+    private I18nInterceptor i18nInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(i18nInterceptor);
         registry.addInterceptor(loginInterceptor);
-        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
-        interceptor.setParamName("lang");
-        registry.addInterceptor(interceptor);
     }
 }

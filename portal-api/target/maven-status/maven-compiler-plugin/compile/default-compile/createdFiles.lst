@@ -1,7 +1,9 @@
+com\tang\appdemo\portalapi\utils\RequestComponent.class
 com\tang\appdemo\portalapi\controller\UserController.class
 com\tang\appdemo\portalapi\interceptor\annotation\Language.class
 com\tang\appdemo\portalapi\PortalApiApplication.class
 com\tang\appdemo\portalapi\interceptor\annotation\LoginRequired.class
 com\tang\appdemo\portalapi\interceptor\I18nInterceptor.class
 com\tang\appdemo\portalapi\interceptor\LoginInterceptor.class
+com\tang\appdemo\portalapi\utils\ReflexUtil.class
 com\tang\appdemo\portalapi\config\WebMvcConfig.class

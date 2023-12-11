@@ -10,6 +10,10 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+
+import java.util.Locale;
 
 /**
  * @description 全局异常处理
@@ -36,9 +40,11 @@ public class AppExceptionHandler {
     public Result loginException(LoginException e){
         log.error("AppExceptionHandler, loginException", e);
 
+        Locale locale = (Locale)RequestContextHolder.getRequestAttributes().getAttribute(AppConstants.LOCALE, RequestAttributes.SCOPE_REQUEST);
+
         String message = messageUtils.getMessage(
                 AppConstants.ERROR_CODE_PREFIX + e.getErrorCode().getAppCode(),
-                LocaleContextHolder.getLocale(),
+                locale,
                 null);
 
         log.info("异常信息：" + message);

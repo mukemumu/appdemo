@@ -11,9 +11,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import java.util.Locale;
 
 /**
- * @description 请求工具类
- *
  * @author tanghx
+ * @description 请求工具类
  * @date 2023/12/7 10:57
  */
 @Slf4j
@@ -24,8 +23,8 @@ public class RequestComponent {
      * 获取 Request 请求对象
      * @return
      */
-    public HttpServletRequest getRequest(){
-        if (getRequestAttributes() != null){
+    public HttpServletRequest getRequest() {
+        if (getRequestAttributes() != null) {
             return getRequestAttributes().getRequest();
         }
 
@@ -34,17 +33,28 @@ public class RequestComponent {
 
     /**
      * 获取请求头信息
+     *
      * @return
      */
     private ServletRequestAttributes getRequestAttributes() {
-        return (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
+        return (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
     }
 
     /**
-     * 获取 Locale
+     * 获取 Locale 对象
+     *
      * @return
      */
-//    public Locale getLocale() {
-//        return AppConstants.LOCALE;
-//    }
+    public Locale getLocale() {
+        return getRequest().getLocale();
+    }
+
+    /**
+     * 获取对应的 Request Header 信息
+     * @param header
+     * @return
+     */
+    public String getHeader(String header) {
+        return getRequest().getHeader(header);
+    }
 }

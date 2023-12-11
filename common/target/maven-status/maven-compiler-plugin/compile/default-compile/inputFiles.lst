@@ -5,12 +5,9 @@ F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\config
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\config\SwaggerConfig.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\LoginContextUtil.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\CaptchaUtils.java
-F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\config\i18nInterceptorConfig.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\exception\AppException.java
-F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\ReflexUtil.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\result\Result.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\MessageUtils.java
-F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\RequestComponent.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\exception\AppExceptionHandler.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\utils\EmailUtils.java
 F:\Git-repository\appdemo-be\common\src\main\java\com\tang\appdemo\common\exception\ErrorCode.java
