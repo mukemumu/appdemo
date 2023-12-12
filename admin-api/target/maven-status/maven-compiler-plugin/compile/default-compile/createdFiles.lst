@@ -1,1 +1,2 @@
-com\tang\appdemo\adminApi\AdminApiApplication.class
+com\tang\appdemo\adminapi\AdminApiApplication.class
+com\tang\appdemo\adminapi\config\SwaggerConfig.class

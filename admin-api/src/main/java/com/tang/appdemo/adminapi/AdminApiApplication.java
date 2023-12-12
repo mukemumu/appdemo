@@ -1,5 +1,6 @@
 package com.tang.appdemo.adminapi;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author tanghx
  * @date 2023/12/4 10:14
  */
+@Slf4j
 @SpringBootApplication
 @ComponentScan("com.tang.appdemo")
 public class AdminApiApplication {

@@ -35,6 +35,8 @@
         <swaggerui.version>2.9.2</swaggerui.version>
         <pagehelper.version>1.4.3</pagehelper.version>
         <druid>1.0.18</druid>
+        <springdoc.openapi.api>2.0.4</springdoc.openapi.api>
+        <springdoc.openapi.ui>2.0.4</springdoc.openapi.ui>
     </properties>
 
     <dependencyManagement>
@@ -77,6 +79,18 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swaggerui.version}</version>
+            </dependency>
+
+            <!-- Swagger2 - SpringBoot3 -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
+                <version>${springdoc.openapi.api}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.openapi.ui}</version>
             </dependency>
 
             <!-- pageHelper -->
