@@ -1,6 +1,6 @@
 package com.tang.appdemo.portalapi.controller;
 
-import com.tang.appdemo.portalapi.interceptor.annotation.Language;
+import com.tang.appdemo.portalapi.interceptor.annotation.LocaleRequired;
 import com.tang.appdemo.portalapi.interceptor.annotation.LoginRequired;
 import com.tang.appdemo.repository.model.dto.LoginDto;
 import com.tang.appdemo.repository.model.po.User;
@@ -49,7 +49,7 @@ public class UserController {
      * @return
      */
 
-    @Language
+    @LocaleRequired
     @LoginRequired
     @GetMapping(value = "/getUserInfo")
     public UserInfoVo getUserInfo(@RequestHeader(name = "token") String token){

@@ -1,5 +1,6 @@
 package com.tang.appdemo.message;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,6 +19,7 @@ public class MessageTest {
     public void messageTest(){
         ResourceBundle bundle = ResourceBundle.getBundle("i18n/message", Locale.SIMPLIFIED_CHINESE);
         System.out.println(bundle.getString("error.code.1010"));
+        Assertions.assertEquals(bundle.getString("error.code.1010"), "新密码长度未在指定范围 [8, 30]");
 
         ResourceBundle usBundle = ResourceBundle.getBundle("i18n/message", Locale.US);
         System.out.println(usBundle.getString("error.code.1010"));

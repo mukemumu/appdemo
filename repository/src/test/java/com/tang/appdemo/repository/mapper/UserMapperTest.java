@@ -24,4 +24,20 @@ public class UserMapperTest {
         String username = "admin";
         User userById = userMapper.findUserByUsername(username);
     }
+
+    @Test
+    void findUserById() {
+    }
+
+    @Test
+    void saveUser() {
+    }
+
+    @Test
+    void updateUserById() {
+    }
+
+    @Test
+    void deleteById() {
+    }
 }

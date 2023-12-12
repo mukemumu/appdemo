@@ -18,7 +18,6 @@ import java.util.Locale;
 @Component
 public class MessageUtils {
 
-
     @Autowired
     private MessageSource messageSource;
 

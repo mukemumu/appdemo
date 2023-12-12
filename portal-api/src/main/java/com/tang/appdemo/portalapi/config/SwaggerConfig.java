@@ -1,4 +1,4 @@
-package com.tang.appdemo.common.config;
+package com.tang.appdemo.portalapi.config;
 
 import org.springframework.context.annotation.Configuration;
 

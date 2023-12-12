@@ -2,8 +2,8 @@ package com.tang.appdemo.portalapi.interceptor;
 
 import com.mysql.cj.util.StringUtils;
 import com.tang.appdemo.common.constants.AppConstants;
+import com.tang.appdemo.portalapi.interceptor.annotation.LocaleRequired;
 import com.tang.appdemo.portalapi.utils.ReflexUtil;
-import com.tang.appdemo.portalapi.interceptor.annotation.Language;
 import com.tang.appdemo.portalapi.utils.RequestComponent;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,10 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 import java.util.Locale;
 
@@ -28,7 +26,7 @@ import java.util.Locale;
 
 @Slf4j
 @Component
-public class I18nInterceptor implements HandlerInterceptor {
+public class LocaleInterceptor implements HandlerInterceptor {
 
     @Autowired
     private RequestComponent requestComponent;
@@ -41,9 +39,9 @@ public class I18nInterceptor implements HandlerInterceptor {
         }
 
         HandlerMethod method = (HandlerMethod) handler;
-        Language language = ReflexUtil.getClazzOrMethodAnnotation(method, Language.class);
+        LocaleRequired localeRequired = ReflexUtil.getClazzOrMethodAnnotation(method, LocaleRequired.class);
 
-        if (language == null){
+        if (localeRequired == null){
             return true;
         }
 
@@ -51,7 +49,7 @@ public class I18nInterceptor implements HandlerInterceptor {
 
         String langHeader = requestComponent.getHeader(AppConstants.ACCEPT_LANGUAGE);
 
-        log.error("language:" + langHeader);
+        log.info("langHeader:" + langHeader+", requestUrl: "+requestComponent.getRequest().getRequestURL());
 
         if (StringUtils.isNullOrEmpty(langHeader)){
             locale = Locale.US;

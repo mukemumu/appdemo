@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -45,7 +46,6 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 用户登陆
-     *
      * @param loginDto
      * @return
      */
@@ -89,12 +89,6 @@ public class UserServiceImpl implements UserService {
 
         User user = JSON.parseObject(userInfo, User.class);
 
-//        String message = messageSource.getMessage("error.code.1007", null, LocaleContextHolder.getLocale());
-//        log.info("提示信息：");
-
-//        String message = messageUtils.getMessage("error.code.1007", LocaleContextHolder.getLocale(), null);
-//        log.info("UserServiceImpl getUserInfo user: " + user + ", message: " + message);
-
         return new UserInfoVo(user);
     }
 
@@ -103,12 +97,13 @@ public class UserServiceImpl implements UserService {
      * @param user
      */
     @Override
+    @Transactional
     public void saveUser(User user) {
 
         // 查询用户是否已经存在
-        User userById = userMapper.findUserById(user.getId());
+        User userExist = userMapper.findUserById(user.getId());
 
-        if (userById != null){
+        if (userExist != null){
             throw new LoginException(ErrorCode.USER_REPEAT);
         }
 
@@ -123,11 +118,13 @@ public class UserServiceImpl implements UserService {
      * @param user
      */
     @Override
+    @Transactional
     public void updateUser(User user) {
         userMapper.updateUserById(user);
     }
 
     @Override
+    @Transactional
     public void deleteById(Long id) {
         userMapper.deleteById(id);
     }
