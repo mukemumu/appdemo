@@ -47,7 +47,7 @@ public class AppExceptionHandler {
                 locale,
                 null);
 
-        log.info("异常信息：" + message);
+        log.info("异常信息：{}", message);
 
         Integer code = e.getErrorCode().getAppCode();
 

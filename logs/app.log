@@ -2737,3 +2737,168 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.util.comparator
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.7.jar:6.0.7]
 	... 19 more
+2023-12-12 10:44:05.715 [main] INFO  c.t.a.a.AdminApiApplication logStarting - Starting AdminApiApplication using Java 17.0.9 with PID 13956 (F:\Git-repository\appdemo-be\admin-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 10:44:05.737 [main] DEBUG c.t.a.a.AdminApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 10:44:05.741 [main] INFO  c.t.a.a.AdminApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 10:44:08.504 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 10:44:08.515 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 10:44:08.611 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+2023-12-12 10:44:09.877 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 10:44:10.621 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 10:44:10.662 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-12 10:44:10.664 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-12 10:44:10.665 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-12 10:44:10.920 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-12 10:44:10.924 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5040 ms
+2023-12-12 10:44:15.627 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-12 10:44:15.764 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-12 10:44:15.795 [main] INFO  c.t.a.a.AdminApiApplication logStarted - Started AdminApiApplication in 11.968 seconds (process running for 14.635)
+2023-12-12 10:45:12.580 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-12 10:45:12.580 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-12-12 10:45:12.584 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
+2023-12-12 10:45:14.829 [http-nio-8501-exec-9] INFO  o.s.a.AbstractOpenApiResource getOpenApi - Init duration for springdoc-openapi is: 997 ms
+2023-12-12 10:47:40.791 [http-nio-8501-exec-8] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Starting...
+2023-12-12 10:47:41.645 [http-nio-8501-exec-8] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6177261e
+2023-12-12 10:47:41.664 [http-nio-8501-exec-8] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
+2023-12-12 10:59:22.442 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 14380 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 10:59:22.457 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 10:59:22.459 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 10:59:23.804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 10:59:23.808 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 10:59:23.851 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2023-12-12 10:59:24.476 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 10:59:24.868 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 10:59:24.886 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-12 10:59:24.888 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-12 10:59:24.888 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-12 10:59:25.039 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-12 10:59:25.040 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2504 ms
+2023-12-12 10:59:25.244 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskApplication': Encountered invalid @Scheduled method 'sayHello': Cron expression must consist of 6 fields (found 1 in "*/6****?")
+2023-12-12 10:59:25.249 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-12 10:59:25.289 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-12 10:59:25.320 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskApplication': Encountered invalid @Scheduled method 'sayHello': Cron expression must consist of 6 fields (found 1 in "*/6****?")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:605) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:917) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
+	at com.tang.appdemo.task.TaskApplication.main(TaskApplication.java:22) ~[classes/:?]
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'sayHello': Cron expression must consist of 6 fields (found 1 in "*/6****?")
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:515) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$1(ScheduledAnnotationBeanPostProcessor.java:377) ~[spring-context-6.0.7.jar:6.0.7]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:377) ~[spring-context-6.0.7.jar:6.0.7]
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[?:?]
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:376) ~[spring-context-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1773) ~[spring-beans-6.0.7.jar:6.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.7.jar:6.0.7]
+	... 15 more
+2023-12-12 10:59:56.471 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 24472 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 10:59:56.509 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 10:59:56.515 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 10:59:58.552 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 10:59:58.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 10:59:58.615 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-12-12 10:59:59.516 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 11:00:00.360 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 11:00:00.385 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:00.388 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-12 11:00:00.389 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-12 11:00:00.695 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-12 11:00:00.708 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4046 ms
+2023-12-12 11:00:05.009 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:05.021 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-12 11:00:05.063 [main] INFO  o.a.c.h.Http11NioProtocol log - Pausing ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:05.065 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
+2023-12-12 11:00:05.094 [main] INFO  o.a.c.h.Http11NioProtocol log - Stopping ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:05.095 [main] INFO  o.a.c.h.Http11NioProtocol log - Destroying ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:05.115 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-12 11:00:05.158 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8501 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8501 or configure this application to listen on another port.
+
+2023-12-12 11:00:13.887 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown initiated...
+2023-12-12 11:00:14.031 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource close - HikariPool-1 - Shutdown completed.
+2023-12-12 11:00:21.057 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 20180 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 11:00:21.098 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 11:00:21.102 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 11:00:23.909 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 11:00:23.917 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 11:00:24.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2023-12-12 11:00:25.534 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 11:00:26.598 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 11:00:26.621 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:26.623 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-12 11:00:26.624 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-12 11:00:27.022 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-12 11:00:27.028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5758 ms
+2023-12-12 11:00:31.385 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-12 11:00:31.476 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-12 11:00:31.618 [main] INFO  c.t.a.t.TaskApplication logStarted - Started TaskApplication in 12.125 seconds (process running for 13.817)
+2023-12-12 11:00:36.011 [scheduling-1] INFO  c.t.a.t.TaskApplication sayHello - hello
+2023-12-12 11:00:42.002 [scheduling-1] INFO  c.t.a.t.TaskApplication sayHello - hello
+2023-12-12 11:00:48.000 [scheduling-1] INFO  c.t.a.t.TaskApplication sayHello - hello
+2023-12-12 15:53:22.866 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 11552 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 15:53:22.882 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 15:53:22.884 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 15:55:04.546 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 15:55:04.553 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 15:55:04.635 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 44 ms. Found 0 Redis repository interfaces.
+2023-12-12 15:55:05.508 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 15:55:06.083 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 15:55:06.295 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 103319 ms
+2023-12-12 15:55:09.594 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-12 15:55:09.668 [main] INFO  c.t.a.t.TaskApplication logStarted - Started TaskApplication in 108.452 seconds (process running for 111.88)
+2023-12-12 15:55:15.550 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 22520 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 15:55:15.565 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 15:55:15.567 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 16:14:27.267 [JMX server connection timeout 33] WARN  j.m.r.rmi log - Failed to close: java.rmi.NoSuchObjectException: object not exported
+2023-12-12 16:14:27.271 [RMI TCP Connection(1)-192.168.16.1] WARN  j.m.r.misc log - The server has decided to close this client connection.
+2023-12-12 16:14:28.660 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 16:14:28.665 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 16:14:28.712 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-12-12 16:14:29.309 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 16:14:29.768 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 16:14:29.917 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1154265 ms
+2023-12-12 18:01:46.723 [main] INFO  c.t.a.t.TaskApplication logStarting - Starting TaskApplication using Java 17.0.9 with PID 15632 (F:\Git-repository\appdemo-be\task\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
+2023-12-12 18:01:46.762 [main] DEBUG c.t.a.t.TaskApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
+2023-12-12 18:01:46.766 [main] INFO  c.t.a.t.TaskApplication logStartupProfileInfo - The following 1 profile is active: "dev"
+2023-12-12 18:01:49.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-12 18:01:49.879 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-12 18:01:49.967 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-12-12 18:01:51.097 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
+2023-12-12 18:01:52.023 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
+2023-12-12 18:01:52.055 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-12 18:01:52.059 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
+2023-12-12 18:01:52.060 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-12 18:01:52.310 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
+2023-12-12 18:01:52.314 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 5404 ms
+2023-12-12 18:01:57.142 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
+2023-12-12 18:01:57.213 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-12 18:01:57.253 [main] INFO  c.t.a.t.TaskApplication logStarted - Started TaskApplication in 12.679 seconds (process running for 18.112)
