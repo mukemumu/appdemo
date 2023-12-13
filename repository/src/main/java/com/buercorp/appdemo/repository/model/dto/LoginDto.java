@@ -13,7 +13,8 @@ import lombok.Data;
 @Data
 public class LoginDto {
 
-    @NotNull(message = "账号不能为空")
+    @Size(message = "{LoginDto.username.Size}")
+    @NotNull(message = "{LoginDto.username.NotNull}")
     private String username;
 
     @Size(min = 6, max = 12, message = "密码长度为 6 ~ 12！")

@@ -1,6 +1,7 @@
 package com.buercorp.appdemo.repository.mapper;
 
 import com.buercorp.appdemo.repository.model.po.User;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,6 +19,12 @@ public class UserMapperTest {
 
     @Autowired
     private UserMapper userMapper;
+
+    @BeforeAll
+    public void setUp(){
+        String username = "admin";
+        User userById = userMapper.findUserByUsername(username);
+    }
 
     @Test
     public void findUserByUsernameTest(){

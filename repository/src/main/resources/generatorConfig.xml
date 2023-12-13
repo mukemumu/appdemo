@@ -23,7 +23,7 @@ mvn -DgTable={tablename} mybatis-generator:generate
 
         <!-- ${your_project_name} -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/db_spzx?characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true"
+                        connectionURL="jdbc:mysql://localhost:3306/db_spzx?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=UTC"
                         userId="root"
                         password="1234">
         </jdbcConnection>
@@ -34,18 +34,18 @@ mvn -DgTable={tablename} mybatis-generator:generate
 
         <!-- generate location -->
         <!-- 1. po location -->
-        <javaModelGenerator targetPackage="com.tang.appdemo.repository.model.po" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.buercorp.appdemo.repository.model.po" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <!-- 2. mapper xml location-->
-        <sqlMapGenerator targetPackage="mapper" targetProject="${basedir}/src/main/resources/mapper">
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/mapper">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!-- 3. mapper class location -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tang.appdemo.repository.mapper"
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.buercorp.appdemo.repository.mapper"
                              targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
