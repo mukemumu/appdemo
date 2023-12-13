@@ -1,9 +1,0 @@
-com\buercorp\appdemo\repository\manager\impl\UserManagerImpl.class
-com\buercorp\appdemo\repository\model\vo\LoginVo.class
-com\buercorp\appdemo\repository\model\dto\LoginDto.class
-com\buercorp\appdemo\repository\model\po\User.class
-com\buercorp\appdemo\repository\model\vo\UserInfoVo.class
-com\buercorp\appdemo\repository\mapper\UserMapper.class
-com\buercorp\appdemo\repository\model\po\BaseEntity.class
-com\buercorp\appdemo\repository\RepositoryApplication.class
-com\buercorp\appdemo\repository\manager\UserManager.class

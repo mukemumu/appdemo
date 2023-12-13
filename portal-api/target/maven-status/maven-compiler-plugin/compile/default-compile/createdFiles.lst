@@ -1,9 +1,0 @@
-com\buercorp\appdemo\portalapi\interceptor\annotation\LocaleRequired.class
-com\buercorp\appdemo\portalapi\interceptor\LoginInterceptor.class
-com\buercorp\appdemo\portalapi\controller\UserController.class
-com\buercorp\appdemo\portalapi\PortalApiApplication.class
-com\buercorp\appdemo\portalapi\utils\RequestComponent.class
-com\buercorp\appdemo\portalapi\utils\ReflexUtil.class
-com\buercorp\appdemo\portalapi\config\WebMvcConfig.class
-com\buercorp\appdemo\portalapi\interceptor\annotation\LoginRequired.class
-com\buercorp\appdemo\portalapi\interceptor\LocaleInterceptor.class
