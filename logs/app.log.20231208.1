@@ -4,20 +4,20 @@
 2023-12-08 14:59:40.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 14:59:40.937 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 14:59:40.985 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
-2023-12-08 14:59:41.118 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 14:59:41.118 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 14:59:41.817 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 14:59:41.830 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 14:59:41.832 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 14:59:41.833 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 14:59:41.973 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 14:59:41.973 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2119 ms
-2023-12-08 14:59:42.862 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 14:59:42.862 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 2023-12-08 14:59:42.886 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
 2023-12-08 14:59:42.918 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-12-08 14:59:42.944 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
@@ -35,14 +35,14 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
 	... 17 more
 Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
-	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
@@ -58,20 +58,20 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:01:05.903 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:01:05.907 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:01:05.955 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:01:06.099 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:01:06.099 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:01:06.879 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:01:06.894 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:01:06.896 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 15:01:06.897 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 15:01:07.026 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 15:01:07.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2126 ms
-2023-12-08 15:01:07.817 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:01:07.817 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 2023-12-08 15:01:07.839 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
 2023-12-08 15:01:07.870 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-12-08 15:01:07.908 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
@@ -89,14 +89,14 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
 	... 17 more
 Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
-	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
@@ -112,20 +112,20 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:01:31.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:01:31.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:01:31.538 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:01:31.686 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:01:31.686 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:01:32.433 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:01:32.447 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:01:32.449 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 15:01:32.449 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 15:01:32.581 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 15:01:32.582 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2123 ms
-2023-12-08 15:01:33.510 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:01:33.510 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 2023-12-08 15:01:33.532 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
 2023-12-08 15:01:33.563 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-12-08 15:01:33.589 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
@@ -143,14 +143,14 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
 	... 17 more
 Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
-	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
@@ -166,20 +166,20 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:02:00.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:02:00.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:02:01.006 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:02:01.149 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:02:01.149 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:02:01.952 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:02:01.964 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:02:01.965 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 15:02:01.966 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 15:02:02.099 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 15:02:02.099 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2190 ms
-2023-12-08 15:02:02.908 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+2023-12-08 15:02:02.908 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 2023-12-08 15:02:02.933 [main] INFO  o.a.c.c.StandardService log - Stopping service [Tomcat]
 2023-12-08 15:02:02.962 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2023-12-08 15:02:02.989 [main] ERROR o.s.b.SpringApplication reportFailure - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'messageUtils' defined in file [F:\Git-repository\appdemo-be\common\target\classes\com\tang\appdemo\common\utils\MessageUtils.class]: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1314) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.7.jar:6.0.7]
@@ -197,14 +197,14 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.tang.appdemo.common.utils.MessageUtils]: Constructor threw exception
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:23) ~[classes/:?]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [utils.com.buercorp.appdemo.common.MessageUtils]: Constructor threw exception
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1308) ~[spring-beans-6.0.7.jar:6.0.7]
 	... 17 more
 Caused by: java.lang.UnsupportedOperationException: This is a utility class and cannot be instantiated
-	at com.tang.appdemo.common.utils.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.<init>(MessageUtils.java:21) ~[classes/:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
@@ -220,7 +220,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:03:28.559 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:03:28.563 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:03:28.616 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:03:28.771 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:03:28.771 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:03:29.482 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:03:29.495 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:03:29.497 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -244,7 +244,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:09:52.032 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:09:52.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:09:52.084 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:09:52.221 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:09:52.221 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:09:52.964 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:09:52.979 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:09:52.980 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -263,7 +263,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:10:51.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:10:51.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:10:51.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:10:51.639 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:10:51.639 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:10:52.379 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:10:52.391 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:10:52.392 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -282,7 +282,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:12:03.342 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:12:03.346 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:12:03.399 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:12:03.544 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:12:03.544 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:12:04.356 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:12:04.369 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:12:04.371 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -302,7 +302,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:14:22.392 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:14:22.396 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:14:22.446 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:14:22.618 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:14:22.618 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:14:23.486 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:14:23.499 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:14:23.500 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -322,7 +322,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:15:16.161 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:15:16.165 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:15:16.210 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:15:16.356 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:15:16.356 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:15:17.147 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:15:17.164 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:15:17.167 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -346,7 +346,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:27:19.410 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:27:19.414 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:27:19.474 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:27:19.646 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:27:19.646 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:27:22.066 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:27:22.143 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:27:22.146 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -366,7 +366,7 @@ Caused by: java.lang.UnsupportedOperationException: This is a utility class and 
 2023-12-08 15:30:55.386 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:30:55.391 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:30:55.442 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:30:55.594 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:30:55.594 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:30:56.329 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:30:56.346 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:30:56.347 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -386,7 +386,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of method messageSourceAccessor in com.tang.appdemo.common.config.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
+Parameter 0 of method messageSourceAccessor in config.com.buercorp.appdemo.common.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -406,7 +406,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 15:31:25.480 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:31:25.484 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:31:25.533 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:31:25.690 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:31:25.690 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:31:26.433 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:31:26.448 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:31:26.451 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -426,7 +426,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of method messageSourceAccessor in com.tang.appdemo.common.config.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
+Parameter 0 of method messageSourceAccessor in config.com.buercorp.appdemo.common.i18nConfig required a bean of type 'org.springframework.context.MessageSource' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -446,7 +446,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 15:32:06.025 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:32:06.030 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:32:06.080 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:32:06.223 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:32:06.223 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:32:07.003 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:32:07.018 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:32:07.019 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -466,7 +466,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 15:50:06.432 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:50:06.437 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:50:06.485 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:50:06.630 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:50:06.630 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:50:07.395 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:50:07.410 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:50:07.412 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -479,14 +479,14 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 15:50:18.973 [http-nio-8501-exec-1] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-12-08 15:50:18.974 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-08 15:50:18.975 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2023-12-08 15:50:19.996 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "com.tang.appdemo.common.utils.MessageUtils.instance" is null
+2023-12-08 15:50:19.996 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "utils.com.buercorp.appdemo.common.MessageUtils.instance" is null
 2023-12-08 15:51:38.877 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 13792 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
 2023-12-08 15:51:38.890 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
 2023-12-08 15:51:38.892 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
 2023-12-08 15:51:39.925 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 15:51:39.929 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 15:51:39.971 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2023-12-08 15:51:40.109 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 15:51:40.109 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 15:51:40.916 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 15:51:40.929 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 15:51:40.931 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -502,7 +502,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:21:16.933 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:21:16.937 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:21:16.988 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:21:17.141 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:21:17.141 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:21:17.906 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:21:17.921 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:21:17.924 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -515,14 +515,14 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:21:23.340 [http-nio-8501-exec-3] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-12-08 16:21:23.341 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-08 16:21:23.343 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
-2023-12-08 16:21:24.333 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "com.tang.appdemo.common.utils.MessageUtils.instance" is null
+2023-12-08 16:21:24.333 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - java.lang.NullPointerException: Cannot read field "messageSource" because "utils.com.buercorp.appdemo.common.MessageUtils.instance" is null
 2023-12-08 16:26:01.074 [main] INFO  c.t.a.p.ProtoApiApplication logStarting - Starting ProtoApiApplication using Java 17.0.9 with PID 1972 (F:\Git-repository\appdemo-be\portal-api\target\classes started by Thinkpad in F:\Git-repository\appdemo-be)
 2023-12-08 16:26:01.084 [main] DEBUG c.t.a.p.ProtoApiApplication logStarting - Running with Spring Boot v3.0.5, Spring v6.0.7
 2023-12-08 16:26:01.086 [main] INFO  c.t.a.p.ProtoApiApplication logStartupProfileInfo - The following 1 profile is active: "dev"
 2023-12-08 16:26:02.220 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:26:02.224 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:26:02.268 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:26:02.411 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:26:02.411 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:26:03.126 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:26:03.139 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:26:03.141 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -548,7 +548,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:32:35.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:32:35.804 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:32:35.849 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:32:35.998 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:32:35.998 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:32:36.801 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:32:36.814 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:32:36.815 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -568,7 +568,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:38:36.942 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:38:36.949 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:38:36.998 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:38:37.147 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:38:37.147 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:38:37.932 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:38:37.948 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:38:37.950 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -588,7 +588,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:39:12.936 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:39:12.940 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:39:12.987 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:39:13.134 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:39:13.134 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:39:13.920 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:39:13.937 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:39:13.940 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -608,7 +608,7 @@ Consider revisiting the entries above or defining a bean of type 'org.springfram
 2023-12-08 16:46:16.465 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:46:16.471 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:46:16.527 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:46:16.688 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:46:16.688 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:46:17.490 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:46:17.504 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:46:17.507 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -641,7 +641,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.context.MessageSource]: Factory method 'messageSource' threw exception with message: Basename must not be empty
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.7.jar:6.0.7]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.0.7.jar:6.0.7]
@@ -651,12 +651,12 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 	at org.springframework.context.support.AbstractResourceBasedMessageSource.addBasenames(AbstractResourceBasedMessageSource.java:102) ~[spring-context-6.0.7.jar:6.0.7]
 	at org.springframework.context.support.AbstractResourceBasedMessageSource.setBasenames(AbstractResourceBasedMessageSource.java:87) ~[spring-context-6.0.7.jar:6.0.7]
 	at org.springframework.context.support.AbstractResourceBasedMessageSource.setBasename(AbstractResourceBasedMessageSource.java:66) ~[spring-context-6.0.7.jar:6.0.7]
-	at com.tang.appdemo.common.config.i18nConfig.messageSource(i18nConfig.java:43) ~[classes/:?]
-	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$0.CGLIB$messageSource$0(<generated>) ~[classes/:?]
-	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:?]
+	at config.com.buercorp.appdemo.common.i18nConfig.messageSource(i18nConfig.java:43) ~[classes/:?]
+	at config.com.buercorp.appdemo.common.i18nConfig$$SpringCGLIB$$0.CGLIB$messageSource$0(<generated>) ~[classes/:?]
+	at config.com.buercorp.appdemo.common.i18nConfig$$SpringCGLIB$$2.invoke(<generated>) ~[classes/:?]
 	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.0.7.jar:6.0.7]
 	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-6.0.7.jar:6.0.7]
-	at com.tang.appdemo.common.config.i18nConfig$$SpringCGLIB$$0.messageSource(<generated>) ~[classes/:?]
+	at config.com.buercorp.appdemo.common.i18nConfig$$SpringCGLIB$$0.messageSource(<generated>) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -670,7 +670,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 16:48:19.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:48:19.938 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:48:19.987 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:48:20.122 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:48:20.122 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:48:20.848 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:48:20.860 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:48:20.862 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -690,7 +690,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 16:50:10.404 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 16:50:10.407 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 16:50:10.458 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 16:50:10.601 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 16:50:10.601 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 16:50:11.318 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 16:50:11.330 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 16:50:11.331 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -711,7 +711,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:00:58.694 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:00:58.698 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:00:58.741 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:00:58.873 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:00:58.873 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:00:59.600 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:00:59.612 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:00:59.614 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -731,7 +731,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:01:42.750 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:01:42.754 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:01:42.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:01:42.950 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:01:42.950 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:01:43.676 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:01:43.688 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:01:43.689 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -747,7 +747,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:02:14.870 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:02:14.875 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:02:14.931 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:02:15.091 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:02:15.091 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:02:15.839 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:02:15.852 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:02:15.853 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -763,7 +763,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:03:10.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:03:10.839 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:03:10.892 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:03:11.035 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:03:11.035 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:03:11.770 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:03:11.783 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:03:11.785 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -779,7 +779,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:06:19.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:06:19.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:06:19.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:06:19.430 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:06:19.430 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:06:20.189 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:06:20.202 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:06:20.204 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -795,7 +795,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:06:37.052 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:06:37.058 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:06:37.105 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:06:37.275 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:06:37.275 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:06:38.069 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:06:38.083 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:06:38.084 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -811,7 +811,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:19:07.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:19:07.293 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:19:07.345 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:19:07.521 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:19:07.521 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:19:08.461 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:19:08.476 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:19:08.478 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -831,7 +831,7 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:24:41.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:24:41.378 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:24:41.431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:24:41.608 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:24:41.608 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:24:42.595 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:24:42.609 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:24:42.610 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
@@ -851,14 +851,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 17:33:57.188 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 17:33:57.192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 17:33:57.243 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 17:33:57.381 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 17:33:57.381 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 17:33:58.088 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 17:33:58.100 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:33:58.102 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 17:33:58.102 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 17:33:58.236 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 17:33:58.237 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2040 ms
-2023-12-08 17:33:59.045 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 17:33:59.045 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 17:33:59.594 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 17:33:59.624 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 17:33:59.639 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.361 seconds (process running for 5.949)
@@ -873,14 +873,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 18:09:02.586 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 18:09:02.593 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 18:09:02.667 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
-2023-12-08 18:09:02.973 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 18:09:02.973 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 18:09:04.205 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 18:09:04.228 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 18:09:04.230 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 18:09:04.232 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 18:09:04.474 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 18:09:04.476 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3429 ms
-2023-12-08 18:09:05.909 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 18:09:05.909 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 18:09:06.875 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 18:09:06.952 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 18:09:06.973 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 7.622 seconds (process running for 10.249)
@@ -890,14 +890,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 18:54:35.095 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 18:54:35.099 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 18:54:35.153 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-2023-12-08 18:54:35.310 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 18:54:35.310 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 18:54:36.089 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 18:54:36.102 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 18:54:36.103 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 18:54:36.104 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 18:54:36.258 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 18:54:36.258 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2179 ms
-2023-12-08 18:54:37.118 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 18:54:37.118 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 18:54:37.734 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 18:54:37.766 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 18:54:37.779 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.673 seconds (process running for 6.188)
@@ -918,14 +918,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 19:09:38.379 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:09:38.383 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:09:38.442 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:09:38.604 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:09:38.604 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:09:39.365 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:09:39.377 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:09:39.379 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 19:09:39.381 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:09:39.535 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:09:39.536 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2205 ms
-2023-12-08 19:09:40.396 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:09:40.396 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:09:41.050 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:09:41.081 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:09:41.092 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.834 seconds (process running for 6.234)
@@ -939,14 +939,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 19:12:30.774 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:12:30.778 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:12:30.821 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:12:30.967 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:12:30.967 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:12:31.713 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:12:31.726 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:12:31.727 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 19:12:31.728 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:12:31.869 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:12:31.870 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2112 ms
-2023-12-08 19:12:32.716 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:12:32.716 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:12:33.263 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:12:33.293 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:12:33.306 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.513 seconds (process running for 5.92)
@@ -960,14 +960,14 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 19:13:26.469 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:13:26.472 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:13:26.522 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:13:26.676 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:13:26.676 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:13:27.468 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:13:27.481 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:13:27.483 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 19:13:27.484 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:13:27.629 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:13:27.630 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2216 ms
-2023-12-08 19:13:28.449 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:13:28.449 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:13:29.002 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:13:29.031 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:13:29.048 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.661 seconds (process running for 6.119)
@@ -977,9 +977,9 @@ Caused by: java.lang.IllegalArgumentException: Basename must not be empty
 2023-12-08 19:13:50.029 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
 org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
 	at org.springframework.context.support.AbstractMessageSource.getMessage(AbstractMessageSource.java:161) ~[spring-context-6.0.7.jar:6.0.7]
-	at com.tang.appdemo.common.utils.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
 	at com.tang.appdemo.service.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:95) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -1036,14 +1036,14 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:18:33.420 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:18:33.424 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:18:33.476 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:18:33.637 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:18:33.637 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:18:34.427 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:18:34.440 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:18:34.441 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 19:18:34.442 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:18:34.581 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:18:34.582 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2251 ms
-2023-12-08 19:18:35.390 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:18:35.390 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:18:35.943 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:18:35.970 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:18:35.983 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.606 seconds (process running for 6.076)
@@ -1053,9 +1053,9 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:18:47.997 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
 org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
 	at org.springframework.context.support.AbstractMessageSource.getMessage(AbstractMessageSource.java:161) ~[spring-context-6.0.7.jar:6.0.7]
-	at com.tang.appdemo.common.utils.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
 	at com.tang.appdemo.service.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:95) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -1112,7 +1112,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:23:27.988 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:23:27.992 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:23:28.042 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:23:28.192 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:23:28.192 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:23:28.606 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'i18nConfig': Injection of autowired dependencies failed
 2023-12-08 19:23:28.619 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
@@ -1144,7 +1144,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.message.basename' in value "${spring.message.basename}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.0.7.jar:6.0.7]
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.0.7.jar:6.0.7]
@@ -1165,7 +1165,7 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'sp
 2023-12-08 19:24:39.020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:24:39.024 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:24:39.079 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:24:39.235 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:24:39.235 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:24:39.634 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'i18nConfig': Injection of autowired dependencies failed
 2023-12-08 19:24:39.646 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
@@ -1197,7 +1197,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.message.basename' in value "${spring.message.basename}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.0.7.jar:6.0.7]
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.0.7.jar:6.0.7]
@@ -1218,7 +1218,7 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'sp
 2023-12-08 19:24:50.657 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:24:50.661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:24:50.713 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:24:50.881 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:24:50.881 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:24:51.320 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'i18nConfig': Injection of autowired dependencies failed
 2023-12-08 19:24:51.336 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger logMessage - 
 
@@ -1250,7 +1250,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.5.jar:3.0.5]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.5.jar:3.0.5]
-	at com.tang.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
+	at com.buercorp.appdemo.portalapi.PortalApiApplication.main(ProtoApiApplication.java:24) ~[classes/:?]
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.message.basename' in value "${spring.message.basename}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.0.7.jar:6.0.7]
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.0.7.jar:6.0.7]
@@ -1271,14 +1271,14 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'sp
 2023-12-08 19:27:25.852 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:27:25.856 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:27:25.911 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:27:26.087 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:27:26.087 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:27:27.216 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:27:27.246 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:27:27.247 [main] INFO  o.a.c.c.StandardService log - Starting service [Tomcat]
 2023-12-08 19:27:27.248 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:27:27.394 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:27:27.395 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2632 ms
-2023-12-08 19:27:28.745 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:27:28.745 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:27:29.307 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:27:29.356 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:27:29.381 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 5.611 seconds (process running for 7.06)
@@ -1288,9 +1288,9 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'sp
 2023-12-08 19:27:37.540 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
 org.springframework.context.NoSuchMessageException: No message found under code 'error.code.1007' for locale 'zh_CN'.
 	at org.springframework.context.support.AbstractMessageSource.getMessage(AbstractMessageSource.java:161) ~[spring-context-6.0.7.jar:6.0.7]
-	at com.tang.appdemo.common.utils.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
+	at utils.com.buercorp.appdemo.common.MessageUtils.getMessage(MessageUtils.java:26) ~[classes/:?]
 	at com.tang.appdemo.service.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:95) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:61) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -1347,7 +1347,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:30:42.370 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:30:42.374 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:30:42.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:30:42.592 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:30:42.592 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:30:43.003 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
 2023-12-08 19:30:43.351 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:30:43.367 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
@@ -1355,7 +1355,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:30:43.370 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:30:43.513 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:30:43.514 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2249 ms
-2023-12-08 19:30:44.341 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:30:44.341 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:30:44.916 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:30:44.945 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:30:44.960 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.674 seconds (process running for 6.084)
@@ -1368,7 +1368,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:34:40.658 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate multipleStoresDetected - Multiple Spring Data modules found, entering strict repository configuration mode
 2023-12-08 19:34:40.663 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
 2023-12-08 19:34:40.713 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate registerRepositoriesIn - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2023-12-08 19:34:40.872 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'com.tang.appdemo.repository.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+2023-12-08 19:34:40.872 [main] WARN  o.m.s.m.ClassPathMapperScanner warn - Skipping MapperFactoryBean with name 'userMapper' and 'mapper.com.buercorp.appdemo.repository.UserMapper' mapperInterface. Bean already defined with the same name!
 2023-12-08 19:34:41.291 [main] WARN  c.t.a.c.c.i18nConfig messageSource - messageSource baseName: classpath:i18n/message
 2023-12-08 19:34:41.636 [main] INFO  o.s.b.w.e.t.TomcatWebServer initialize - Tomcat initialized with port(s): 8501 (http)
 2023-12-08 19:34:41.651 [main] INFO  o.a.c.h.Http11NioProtocol log - Initializing ProtocolHandler ["http-nio-8501"]
@@ -1376,7 +1376,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2023-12-08 19:34:41.655 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-08 19:34:41.793 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-08 19:34:41.794 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2114 ms
-2023-12-08 19:34:42.593 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-08 19:34:42.593 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-08 19:34:43.149 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-08 19:34:43.181 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-08 19:34:43.193 [main] INFO  c.t.a.p.ProtoApiApplication logStarted - Started ProtoApiApplication in 4.453 seconds (process running for 5.819)

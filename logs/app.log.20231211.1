@@ -47,10 +47,10 @@
 2023-12-11 14:10:48.253 [http-nio-8501-exec-1] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
 2023-12-11 14:11:44.447 [http-nio-8501-exec-3] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: null, message: 密码不能为空!
 2023-12-11 14:11:44.450 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -126,10 +126,10 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-11 14:18:57.675 [http-nio-8501-exec-2] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: User(userName=admin, password=96e79218965eb72c92a549dd5a330112, name=admin, phone=15011113652, avatar=https://oss.aliyuncs.com/aliyun_id_photo_bucket/default_handsome.jpg, description=null, status=1), message: 密码不能为空!
 2023-12-11 14:19:15.503 [http-nio-8501-exec-3] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: null, message: 密码不能为空!
 2023-12-11 14:19:15.506 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -200,10 +200,10 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-11 14:31:14.241 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:31:14.242 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 14:31:39.334 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -293,10 +293,10 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-11 14:38:35.272 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:38:35.274 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 0 ms
 2023-12-11 14:40:00.562 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -367,8 +367,8 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-11 14:42:59.466 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:42:59.468 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 14:44:31.243 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -430,8 +430,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 14:47:25.135 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:47:25.137 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 14:47:25.915 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -493,8 +493,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 14:50:04.948 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:50:04.949 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 14:50:05.861 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -557,8 +557,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 14:52:31.279 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:52:31.282 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 14:52:32.061 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -621,8 +621,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 14:53:07.437 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:53:07.438 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 14:53:08.237 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -685,8 +685,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 14:54:36.847 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 14:54:36.848 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 14:54:49.619 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -749,8 +749,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 15:06:15.899 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 15:06:15.901 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 15:06:43.249 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -813,8 +813,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 15:11:08.000 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 15:11:08.002 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 15:11:28.459 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -877,8 +877,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 15:24:33.167 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 15:24:33.169 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 15:24:40.629 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -941,8 +941,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 15:25:10.239 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 15:25:10.241 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 15:25:35.075 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1107,8 +1107,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:07:07.567 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:07:07.570 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 17:07:18.180 [http-nio-8501-exec-6] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1171,8 +1171,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:20:33.007 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:20:33.008 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 17:20:33.782 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1235,8 +1235,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:21:31.455 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:21:31.456 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 17:21:52.038 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1299,8 +1299,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:22:04.851 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:22:04.852 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 17:22:05.717 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1363,8 +1363,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:22:46.496 [http-nio-8501-exec-4] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:22:46.497 [http-nio-8501-exec-4] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 17:22:47.389 [http-nio-8501-exec-4] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1427,8 +1427,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 17:30:12.963 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 17:30:12.964 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 17:30:13.802 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1472,8 +1472,8 @@ com.tang.appdemo.common.exception.LoginException: null
 	at java.lang.Thread.run(Thread.java:842) ~[?:?]
 2023-12-11 17:30:13.825 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
 2023-12-11 17:31:21.860 [http-nio-8501-exec-7] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1544,8 +1544,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:00:44.270 [http-nio-8501-exec-2] INFO  c.z.h.p.HikariPool checkFailFast - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a28604c
 2023-12-11 18:00:44.272 [http-nio-8501-exec-2] INFO  c.z.h.HikariDataSource getConnection - HikariPool-1 - Start completed.
 2023-12-11 18:01:07.219 [http-nio-8501-exec-4] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1610,8 +1610,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:01:58.314 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:01:58.316 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 18:01:59.096 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1674,8 +1674,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:07:45.366 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:07:45.368 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 18:07:46.583 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1738,8 +1738,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:08:36.719 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:08:36.724 [http-nio-8501-exec-3] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 4 ms
 2023-12-11 18:08:37.916 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1802,8 +1802,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:09:15.208 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:09:15.211 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 1 ms
 2023-12-11 18:09:16.399 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1866,8 +1866,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:10:24.517 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:10:24.520 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 18:10:25.819 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1911,8 +1911,8 @@ com.tang.appdemo.common.exception.LoginException: null
 	at java.lang.Thread.run(Thread.java:842) ~[?:?]
 2023-12-11 18:10:25.842 [http-nio-8501-exec-1] INFO  c.t.a.c.e.AppExceptionHandler loginException - 异常信息：登录令牌不存在或者已经过期!
 2023-12-11 18:10:35.653 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -1975,8 +1975,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:11:39.446 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:11:39.448 [http-nio-8501-exec-1] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 18:11:40.735 [http-nio-8501-exec-1] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -2039,8 +2039,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:12:35.686 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Initializing Servlet 'dispatcherServlet'
 2023-12-11 18:12:35.688 [http-nio-8501-exec-2] INFO  o.s.w.s.DispatcherServlet initServletBean - Completed initialization in 2 ms
 2023-12-11 18:12:37.112 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]
@@ -2112,8 +2112,8 @@ com.tang.appdemo.common.exception.LoginException: null
 2023-12-11 18:14:26.319 [http-nio-8501-exec-2] ERROR c.t.a.p.i.I18nInterceptor preHandle - localeRequired:en_US
 2023-12-11 18:14:38.885 [http-nio-8501-exec-3] ERROR c.t.a.p.i.I18nInterceptor preHandle - localeRequired:en_US
 2023-12-11 18:14:38.904 [http-nio-8501-exec-3] ERROR c.t.a.c.e.AppExceptionHandler loginException - AppExceptionHandler, loginException
-com.tang.appdemo.common.exception.LoginException: null
-	at com.tang.appdemo.portalapi.interceptor.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
+exception.com.buercorp.appdemo.common.LoginException: null
+	at interceptor.com.buercorp.appdemo.portalapi.LoginInterceptor.preHandle(LoginInterceptor.java:59) ~[classes/:?]
 	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1076) ~[spring-webmvc-6.0.7.jar:6.0.7]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.7.jar:6.0.7]

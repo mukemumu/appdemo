@@ -1,7 +1,6 @@
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\LocaleInterceptor.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\LoginInterceptor.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\config\WebMvcConfig.java
-F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\config\SwaggerConfig.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\interceptor\annotation\LoginRequired.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\utils\ReflexUtil.java
 F:\Git-repository\appdemo-be\portal-api\src\main\java\com\tang\appdemo\portalapi\controller\UserController.java

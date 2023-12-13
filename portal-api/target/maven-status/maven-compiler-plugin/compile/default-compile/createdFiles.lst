@@ -1,4 +1,3 @@
-com\tang\appdemo\portalapi\config\SwaggerConfig.class
 com\tang\appdemo\portalapi\utils\RequestComponent.class
 com\tang\appdemo\portalapi\controller\UserController.class
 com\tang\appdemo\portalapi\PortalApiApplication.class

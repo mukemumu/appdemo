@@ -42,8 +42,8 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -104,8 +104,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -159,7 +159,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -278,8 +278,8 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -340,8 +340,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -395,7 +395,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -516,8 +516,8 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -608,8 +608,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -663,7 +663,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -837,10 +837,10 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.1.jar:3.0.1]
 	... 58 more
 2023-12-09 14:44:29.304 [http-nio-8501-exec-5] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -892,10 +892,10 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.7.jar:10.1.7]
 	at java.lang.Thread.run(Thread.java:842) ~[?:?]
 2023-12-09 15:04:08.698 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]

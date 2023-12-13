@@ -11,7 +11,7 @@
 2023-12-09 14:06:39.619 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-09 14:06:39.840 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-09 14:06:39.841 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3395 ms
-2023-12-09 14:06:41.566 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-09 14:06:41.566 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-09 14:06:42.286 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-09 14:06:42.331 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-09 14:06:42.358 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 7.664 seconds (process running for 11.186)
@@ -63,8 +63,8 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -125,8 +125,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -180,7 +180,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -268,7 +268,7 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 2023-12-09 14:10:05.379 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-09 14:10:05.506 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-09 14:10:05.507 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2055 ms
-2023-12-09 14:10:06.275 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-09 14:10:06.275 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-09 14:10:06.817 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-09 14:10:06.843 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-09 14:10:06.855 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 4.338 seconds (process running for 5.802)
@@ -320,8 +320,8 @@ java.sql.SQLException: Access denied for user 'root'@'localhost' (using password
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -382,8 +382,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -437,7 +437,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -525,7 +525,7 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 2023-12-09 14:12:35.675 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-09 14:12:35.810 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-09 14:12:35.810 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1985 ms
-2023-12-09 14:12:36.569 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-09 14:12:36.569 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-09 14:12:37.077 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-09 14:12:37.110 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-09 14:12:37.122 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 4.222 seconds (process running for 5.617)
@@ -579,8 +579,8 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -671,8 +671,8 @@ org.mybatis.spring.MyBatisSystemException: null
 	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:145) ~[mybatis-3.5.11.jar:3.5.11]
 	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.11.jar:3.5.11]
 	at jdk.proxy2.$Proxy84.findUserByUsername(Unknown Source) ~[?:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.login(UserController.java:43) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.login(UserServiceImpl.java:53) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.login(UserController.java:43) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -726,7 +726,7 @@ org.mybatis.spring.MyBatisSystemException: null
 Caused by: org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 ### The error may exist in file [F:\Git-repository\appdemo-be\repository\target\classes\mapper\UserMapper.xml]
-### The error may involve com.tang.appdemo.repository.mapper.UserMapper.findUserByUsername
+### The error may involve mapper.com.buercorp.appdemo.repository.UserMapper.findUserByUsername
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
 	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.11.jar:3.5.11]
@@ -912,7 +912,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2023-12-09 14:15:32.023 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-09 14:15:32.148 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-09 14:15:32.151 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2105 ms
-2023-12-09 14:15:32.923 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-09 14:15:32.923 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-09 14:15:33.439 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-09 14:15:33.465 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-09 14:15:33.478 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 4.244 seconds (process running for 9.616)
@@ -925,10 +925,10 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2023-12-09 14:18:31.437 [http-nio-8501-exec-3] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: User(userName=admin, password=96e79218965eb72c92a549dd5a330112, name=admin, phone=15011113652, avatar=https://oss.aliyuncs.com/aliyun_id_photo_bucket/default_handsome.jpg, description=null, status=1), message: 密码不能为空!
 2023-12-09 14:44:29.302 [http-nio-8501-exec-5] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: null, message: 密码不能为空!
 2023-12-09 14:44:29.304 [http-nio-8501-exec-5] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -982,10 +982,10 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-09 14:44:59.322 [http-nio-8501-exec-8] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: User(userName=admin, password=96e79218965eb72c92a549dd5a330112, name=admin, phone=15011113652, avatar=https://oss.aliyuncs.com/aliyun_id_photo_bucket/default_handsome.jpg, description=null, status=1), message: 密码不能为空!
 2023-12-09 15:04:08.697 [http-nio-8501-exec-2] INFO  c.t.a.s.u.i.UserServiceImpl getUserInfo - UserServiceImpl getUserInfo user: null, message: 密码不能为空!
 2023-12-09 15:04:08.698 [http-nio-8501-exec-2] ERROR c.t.a.c.e.AppExceptionHandler exception - AppExceptionHandler, exception
-java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model.po.User.getUserName()" because "user" is null
-	at com.tang.appdemo.repository.model.vo.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
-	at com.tang.appdemo.service.user.impl.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
-	at com.tang.appdemo.portalapi.controller.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
+java.lang.NullPointerException: Cannot invoke "po.model.com.buercorp.appdemo.repository.User.getUserName()" because "user" is null
+	at vo.model.com.buercorp.appdemo.repository.UserInfoVo.<init>(UserInfoVo.java:29) ~[classes/:?]
+	at impl.user.com.buercorp.appdemo.service.UserServiceImpl.getUserInfo(UserServiceImpl.java:97) ~[classes/:?]
+	at controller.com.buercorp.appdemo.portalapi.UserController.getUserInfo(UserController.java:55) ~[classes/:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
 	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
 	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
@@ -1054,7 +1054,7 @@ java.lang.NullPointerException: Cannot invoke "com.tang.appdemo.repository.model
 2023-12-09 15:06:48.910 [main] INFO  o.a.c.c.StandardEngine log - Starting Servlet engine: [Apache Tomcat/10.1.7]
 2023-12-09 15:06:49.075 [main] INFO  o.a.c.c.C.[.[.[/] log - Initializing Spring embedded WebApplicationContext
 2023-12-09 15:06:49.077 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2788 ms
-2023-12-09 15:06:50.190 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static com.tang.appdemo.common.utils.MessageUtils com.tang.appdemo.common.result.Result.messageUtils
+2023-12-09 15:06:50.190 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor lambda$buildAutowiringMetadata$1 - Autowired annotation is not supported on static fields: private static utils.com.buercorp.appdemo.common.MessageUtils result.com.buercorp.appdemo.common.Result.messageUtils
 2023-12-09 15:06:50.782 [main] INFO  o.a.c.h.Http11NioProtocol log - Starting ProtocolHandler ["http-nio-8501"]
 2023-12-09 15:06:50.810 [main] INFO  o.s.b.w.e.t.TomcatWebServer start - Tomcat started on port(s): 8501 (http) with context path ''
 2023-12-09 15:06:50.825 [main] INFO  c.t.a.p.PortalApiApplication logStarted - Started PortalApiApplication in 5.93 seconds (process running for 8.883)
