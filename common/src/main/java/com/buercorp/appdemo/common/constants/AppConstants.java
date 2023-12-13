@@ -22,5 +22,5 @@ public class AppConstants {
 
     public static final String LOCALE = "locale";
 
-
+    public static final String PARAM_VALID = "参数不合法：";
 }

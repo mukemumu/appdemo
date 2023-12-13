@@ -44,6 +44,8 @@ public enum ErrorCode {
 
     ACCOUNT_STOP(HttpStatus.INTERNAL_SERVER_ERROR.value(), 1003),
 
+    USER_DOSE_NOT_EXIST(HttpStatus.BAD_REQUEST.value(), 1004),
+
     UPDATE_PASSWORD_NEW_PASSWORD_CONFIRM_NOT_MATCH(HttpStatus.BAD_REQUEST.value(),1009),
 
     VALIDATE_CODE_ERROR(HttpStatus.BAD_REQUEST.value(),1011) ,

@@ -1,5 +1,7 @@
 package com.buercorp.appdemo.common.exception;
 
+import lombok.Data;
+
 /**
  * @description 登陆异常
  *
@@ -9,6 +11,6 @@ package com.buercorp.appdemo.common.exception;
 public class LoginException extends AppException {
 
     public LoginException(ErrorCode errorCode){
-        setErrorCode(errorCode);
+        super(errorCode);
     }
 }

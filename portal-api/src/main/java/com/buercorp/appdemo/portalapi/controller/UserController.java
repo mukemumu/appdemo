@@ -11,10 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @description 登陆请求处理
+ * @description user - 请求处理
  *
  * @author tanghx
  * @date 2023/12/4 10:06
@@ -38,7 +39,7 @@ public class UserController {
      */
 
     @PostMapping(value = "/login")
-    public LoginVo login(@RequestBody LoginDto loginDto){
+    public LoginVo login(@RequestBody @Validated LoginDto loginDto){
         LoginVo loginVo = userService.login(loginDto);
         return loginVo;
     }
@@ -63,7 +64,7 @@ public class UserController {
      */
     @LoginRequired
     @PostMapping(value = "/saveUser")
-    public void saveUser(@RequestBody User user){
+    public void saveUser(@RequestBody @Validated User user){
         userService.saveUser(user);
     }
 
@@ -73,7 +74,7 @@ public class UserController {
      */
     @LoginRequired
     @PutMapping(value = "/updateSysUser")
-    public void updateSysUser(@RequestBody User user) {
+    public void updateSysUser(@RequestBody @Validated User user) {
         userService.updateUser(user);
     }
 

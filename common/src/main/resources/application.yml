@@ -2,6 +2,6 @@ server:
   port: 8501
 spring:
   application:
-    name: proto-api
+    name: buercorp-apppdemo
   profiles:
     active: dev

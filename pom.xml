@@ -37,6 +37,7 @@
         <druid>1.0.18</druid>
         <springdoc.openapi.api>2.0.4</springdoc.openapi.api>
         <springdoc.openapi.ui>2.0.4</springdoc.openapi.ui>
+        <hibernate.validator>8.0.0.Final</hibernate.validator>
     </properties>
 
     <dependencyManagement>
@@ -107,6 +108,12 @@
                 <version>${druid}</version>
             </dependency>
 
+            <!-- hibernate-validator 请求参数验证 -->
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate.validator}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @Slf4j
 @SpringBootApplication
-@ComponentScan("com.tang.appdemo")
+@ComponentScan("com.buercorp.appdemo")
 public class AdminApiApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminApiApplication.class, args);

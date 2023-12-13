@@ -1,6 +1,7 @@
 package com.buercorp.appdemo.service.user.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.buercorp.appdemo.common.exception.AppException;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
@@ -119,12 +120,27 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public void updateUser(User user) {
+
+        // 判断用户是否存在
+        User userExist = userMapper.findUserByUsername(user.getUserName());
+        if (userExist == null){
+            throw new AppException(ErrorCode.USER_DOSE_NOT_EXIST);
+        }
+
         userMapper.updateUserById(user);
     }
 
     @Override
     @Transactional
     public void deleteById(Long id) {
+
+        // 判断用户是否存在
+        User user = userMapper.findUserById(id);
+        if (user == null){
+            throw new AppException(ErrorCode.USER_DOSE_NOT_EXIST);
+        }
+
+        // 删除
         userMapper.deleteById(id);
     }
 }

@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Slf4j
 @EnableScheduling
 @SpringBootApplication
-@ComponentScan(basePackages = "com.tang.appdemo")
+@ComponentScan(basePackages = "com.buercorp.appdemo")
 public class TaskApplication {
     public static void main(String[] args) {
         SpringApplication.run(TaskApplication.class, args);

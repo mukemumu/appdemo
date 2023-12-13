@@ -4,21 +4,21 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace：命名空间 -->
-<mapper namespace="com.tang.appdemo.repository.mapper.UserMapper">
+<mapper namespace="com.buercorp.appdemo.repository.mapper.UserMapper">
 
     <sql id="columns">
         id,username,password,name,phone,avatar,description,status,create_time,update_time,is_deleted
     </sql>
 
     <!-- 根据 username 查询用户 -->
-    <select id="findUserByUsername" resultType="com.tang.appdemo.repository.model.po.User">
+    <select id="findUserByUsername" resultType="com.buercorp.appdemo.repository.model.po.User">
         select <include refid="columns"/>
         from sys_user
         where username = #{username}
     </select>
 
     <!-- 根据 id 查询用户信息 -->
-    <select id="findUserById" resultType="com.tang.appdemo.repository.model.po.User">
+    <select id="findUserById" resultType="com.buercorp.appdemo.repository.model.po.User">
         select <include refid="columns"/>
         from sys_user
         where id = #{userId}
