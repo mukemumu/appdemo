@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 
 @SpringBootTest
-@ComponentScan("com.tang.addemo.repository")
+@ComponentScan("com.buercorp.addemo")
 public class UserMapperTest {
 
     @Autowired

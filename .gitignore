@@ -1,1 +1,9 @@
 .idea/
+common/target/
+portal-api/target/
+repository/target/
+logs/app.log
+service/target/
+task/target/
+logs/
+admin-api/target/

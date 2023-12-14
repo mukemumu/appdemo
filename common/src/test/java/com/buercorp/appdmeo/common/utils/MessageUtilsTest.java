@@ -20,12 +20,12 @@ import java.util.Locale;
 @SpringBootTest
 public class MessageUtilsTest {
 
-//    @Autowired
-//    private MessageUtils messageUtils;
-//
-//    @Test
-//    public void  getMessageTest(){
-//        String message = messageUtils.getMessage("error.code.1011", Locale.CHINA, null);
-//        log.info("message：{}", message);
-//    }
+    @Autowired
+    private MessageUtils messageUtils;
+
+    @Test
+    public void  getMessageTest(){
+        String message = messageUtils.getMessage("error.code.1011", Locale.CHINA, null);
+        log.info("message：{}", message);
+    }
 }
