@@ -17,7 +17,7 @@ public class LoginDto {
     @NotNull(message = "{LoginDto.username.NotNull}")
     private String username;
 
-    @Size(min = 6, max = 12, message = "密码长度为 6 ~ 12！")
+    @Size(min = 6, max = 12, message = "{Password.size}")
     private String password;
 
 

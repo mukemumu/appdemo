@@ -1,7 +1,8 @@
 server:
   port: 8501
+
 spring:
   application:
     name: buercorp-apppdemo
   profiles:
-    active: dev
+    default: dev
