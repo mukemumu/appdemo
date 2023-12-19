@@ -2,11 +2,10 @@ package com.buercorp.appdmeo.common.utils;
 
 import com.buercorp.appdemo.common.utils.MessageUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Locale;
 
@@ -17,7 +16,7 @@ import java.util.Locale;
  */
 
 @Slf4j
-@SpringBootTest
+@SpringBootTest(classes = {MessageUtils.class})
 public class MessageUtilsTest {
 
     @Autowired
@@ -27,5 +26,6 @@ public class MessageUtilsTest {
     public void  getMessageTest(){
         String message = messageUtils.getMessage("error.code.1011", Locale.CHINA, null);
         log.info("message：{}", message);
+        Assertions.assertEquals(message, "验证码错误");
     }
 }
