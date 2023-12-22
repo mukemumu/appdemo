@@ -13,6 +13,7 @@ import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 import com.buercorp.appdemo.service.user.UserService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -46,11 +47,12 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 用户登陆
+     *
      * @param loginDto
      * @return
      */
     @Override
-    public LoginVo login(LoginDto loginDto) {
+    public LoginVo login(LoginDto loginDto, StringBuffer requestURL) {
         User user = userMapper.findUserByUsername(loginDto.getUsername());
 
         if (user == null) {
@@ -63,8 +65,15 @@ public class UserServiceImpl implements UserService {
             throw new LoginException(ErrorCode.LOGIN_ERROR_PASSWORD);
         }
 
+        int index = requestURL.indexOf("admin");
+
         String token = UUID.randomUUID().toString().replace("-", "");
-        redisTemplate.opsForValue().set(AppConstants.REDIS_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
+
+        if (index == -1) {
+            redisTemplate.opsForValue().set(AppConstants.REDIS_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
+        } else {
+            redisTemplate.opsForValue().set(AppConstants.ADMIN_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
+        }
 
         LoginVo loginVo = new LoginVo();
         loginVo.setToken(token);
@@ -78,10 +87,13 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public UserInfoVo getUserInfo(String token) {
+    public UserInfoVo getUserInfo(String token, StringBuffer requestUrl) {
+
+        int index = requestUrl.indexOf("admin");
+
         String userInfo = (String) RequestContextHolder
                 .getRequestAttributes()
-                .getAttribute(AppConstants.RESULT_USER, RequestAttributes.SCOPE_REQUEST);
+                .getAttribute(AppConstants.LOGIN_USER, RequestAttributes.SCOPE_REQUEST);
 
         if (StringUtils.isNullOrEmpty(userInfo)) {
             throw new LoginException(ErrorCode.LOGIN_AUTH);
@@ -94,6 +106,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 新增用户
+     *
      * @param user
      */
     @Override
@@ -103,7 +116,7 @@ public class UserServiceImpl implements UserService {
         // 查询用户是否已经存在
         User userExist = userMapper.findUserById(user.getId());
 
-        if (userExist != null){
+        if (userExist != null) {
             throw new LoginException(ErrorCode.USER_REPEAT);
         }
 
@@ -115,6 +128,7 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 修改用户信息
+     *
      * @param user
      */
     @Override
@@ -123,7 +137,7 @@ public class UserServiceImpl implements UserService {
 
         // 判断用户是否存在
         User userExist = userMapper.findUserByUsername(user.getUserName());
-        if (userExist == null){
+        if (userExist == null) {
             throw new AppException(ErrorCode.USER_DOSE_NOT_EXIST);
         }
 
@@ -136,7 +150,7 @@ public class UserServiceImpl implements UserService {
 
         // 判断用户是否存在
         User user = userMapper.findUserById(id);
-        if (user == null){
+        if (user == null) {
             throw new AppException(ErrorCode.USER_DOSE_NOT_EXIST);
         }
 
@@ -144,4 +158,3 @@ public class UserServiceImpl implements UserService {
         userMapper.deleteById(id);
     }
 }
-

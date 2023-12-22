@@ -49,10 +49,10 @@ public class LocaleInterceptor implements HandlerInterceptor {
 
         String langHeader = requestComponent.getHeader(AppConstants.ACCEPT_LANGUAGE);
 
-        log.info("langHeader:" + langHeader+", requestUrl: "+requestComponent.getRequest().getRequestURL());
+        log.info("langHeader:" + langHeader + ", requestUrl: " + requestComponent.getRequest().getRequestURL());
 
         if (StringUtils.isNullOrEmpty(langHeader)){
-            locale = Locale.US;
+            locale = Locale.CHINA;
         }
 
         if ("en_US".equals(langHeader)){

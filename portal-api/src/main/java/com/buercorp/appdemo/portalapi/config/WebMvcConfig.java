@@ -1,5 +1,6 @@
 package com.buercorp.appdemo.portalapi.config;
 
+import com.buercorp.appdemo.portalapi.interceptor.AdminLoginInterceptor;
 import com.buercorp.appdemo.portalapi.interceptor.LocaleInterceptor;
 import com.buercorp.appdemo.portalapi.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,13 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private LocaleInterceptor localeInterceptor;
 
+    @Autowired
+    private AdminLoginInterceptor adminLoginInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(localeInterceptor);
         registry.addInterceptor(loginInterceptor);
+        registry.addInterceptor(adminLoginInterceptor);
     }
 }

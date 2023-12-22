@@ -4,6 +4,7 @@ import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @description
@@ -13,9 +14,9 @@ import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
  */
 public interface UserService {
 
-    LoginVo login(LoginDto loginDto);
+    LoginVo login(LoginDto loginDto, StringBuffer requestURL);
 
-    UserInfoVo getUserInfo(String token);
+    UserInfoVo getUserInfo(String token, StringBuffer requestURL);
 
     void saveUser(User user);
 

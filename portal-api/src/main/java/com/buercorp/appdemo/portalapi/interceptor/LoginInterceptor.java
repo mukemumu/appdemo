@@ -1,5 +1,6 @@
 package com.buercorp.appdemo.portalapi.interceptor;
 
+import com.buercorp.appdemo.portalapi.interceptor.annotation.NotLogin;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
@@ -22,9 +23,10 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * @description protal-api 登陆拦截器
+ *
  * @author tanghx
- * @description 登陆拦截器
- * @date 2023/12/5 17:25
+ * @date 2023/12/21 14:17
  */
 
 @Slf4j
@@ -46,6 +48,13 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         // 获取注解信息
         HandlerMethod handlerMethod = (HandlerMethod) handler;
+
+        NotLogin notLogin = ReflexUtil.getClazzOrMethodAnnotation(handlerMethod, NotLogin.class);
+
+        if (notLogin != null) {     // 不拦截具有特定注解的处理器方法
+            return true;
+        }
+
         LoginRequired loginRequired = ReflexUtil.getClazzOrMethodAnnotation(handlerMethod, LoginRequired.class);
 
         if (loginRequired == null) {     // 没有特定注解，不拦截请求
@@ -60,7 +69,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
 
         // 将完成登陆的用户放入 RequestContextHolder 中
-        RequestContextHolder.currentRequestAttributes().setAttribute(AppConstants.RESULT_USER, userInfo, RequestAttributes.SCOPE_REQUEST);
+        RequestContextHolder.currentRequestAttributes().setAttribute(AppConstants.LOGIN_USER, userInfo, RequestAttributes.SCOPE_REQUEST);
 
         // 更新 token 的过期时间
         redisTemplate.expire(AppConstants.REDIS_TOKEN_PREFIX + token, 15, TimeUnit.MINUTES);

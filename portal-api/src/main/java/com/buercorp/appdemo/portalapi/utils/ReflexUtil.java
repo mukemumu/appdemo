@@ -31,4 +31,13 @@ public class ReflexUtil {
 
         return handlerMethod.getMethod().getAnnotation(annotationClass);
     }
+
+    /**
+     * 返回处理器方法名
+     * @param handlerMethod
+     * @return
+     */
+    public static String getHandlerMethodName(HandlerMethod handlerMethod){
+        return handlerMethod.getMethod().getName();
+    }
 }
