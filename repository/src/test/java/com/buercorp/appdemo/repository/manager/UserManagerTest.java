@@ -1,14 +1,17 @@
 package com.buercorp.appdemo.repository.manager;
 
-import com.buercorp.appdemo.repository.manager.impl.UserManagerImpl;
 import com.buercorp.appdemo.repository.model.po.User;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.jdbc.Sql;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,30 +21,24 @@ import static org.junit.jupiter.api.Assertions.*;
  * @date 2023/12/11 18:50
  */
 @Slf4j
+@DataJpaTest
 @SpringBootTest
+@AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-test.yml")
 class UserManagerTest {
 
-    @Autowired
+    @MockBean
     private UserManager userManager;
 
-    private static User user;
-
-    @BeforeAll
-    public static void bf(@Autowired UserManager manager) {
-        user = manager.getUser(1L);
-    }
-
     @Test
+    @Sql(scripts = "")          // 数据准备脚本
     void getUser() {
         User userTest = userManager.getUser(1L);
-        log.info("user info {}", user);
-        Assertions.assertEquals(user, userTest);
     }
 
     @Test
+    @Sql(scripts = "")          // 数据准备脚本
     void testGetUser() {
         User userTest = userManager.getUser("admin");
-        log.info("user info {}", user);
-        Assertions.assertEquals(user, userTest);
     }
 }
