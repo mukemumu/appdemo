@@ -1,0 +1,17 @@
+SERVICE_NAME=portal-api
+
+JAVA_HOME=/home/buercorp/apps/jdk
+JAVA_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/buercorp/logs/portal-api/heap-dump.hprof "
+
+JAR_PATH=/home/buercorp/deploy/portal-api/portal.jar
+JAR_OPTS="-Dspring.profiles.active=dev -Dserver.port=8503"
+
+TEST_URL=http://localhost:8503/actuator/health
+TEST_WAIT_SECONDS=10
+TEST_TRIES=10
+TEST_INTERVAL=5
+
+SHUTDOWN_URL=http://localhost:8503/actuator/shutdown
+
+
+# must left a empty line at the end

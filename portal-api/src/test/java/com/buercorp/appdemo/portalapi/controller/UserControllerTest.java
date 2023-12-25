@@ -36,8 +36,26 @@ class UserControllerTest {
 
     @Test
     void login() {
-        String re = testRestTemplate.postForObject("/user/login", String.class, null);
-        log.info("token：{}", re.indexOf("token"));
+        // 创建请求头
+        HttpHeaders headers = new HttpHeaders();
+//        headers.setContentType();
+
+        // 创建请求体
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("username", "admin");
+        body.add("password", "111111");
+
+        // 创建请求实体
+        HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(body, null);
+
+        // 发送POST请求
+        String url = "/user/login";
+        String response = testRestTemplate.postForObject(url, requestEntity, String.class);
+
+        log.error("response {}", response);
+
+        // 断言响应内容
+        Assertions.assertNotEquals(response.indexOf("token"), -1);
     }
 
     @Test
