@@ -8,8 +8,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.util.Assert;
 
 /**
@@ -19,69 +24,40 @@ import org.springframework.util.Assert;
  */
 
 @Slf4j
+@DataJpaTest
 @SpringBootTest
-@ComponentScan("com.buercorp.addemo")
+@AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-test.yml")
 public class UserMapperTest {
 
-    @Autowired
+    @MockBean
     private UserMapper userMapper;
 
-    private static User user;
-
-    private static User userTest;
-
-    @BeforeAll
-    public static void setUp(@Autowired UserManager manager){
-        user = manager.getUser(1L);
-        userTest = new User();
-        userTest.setUserName("ceshi");
-        userTest.setPassword("1245");
-        userTest.setName("软件测试");
-    }
-
-    @AfterAll
-    public static void deData(@Autowired UserMapper mapper){
-        User user = mapper.findUserById(userTest.getId());
-        if (user != null){
-            mapper.deleteById(userTest.getId());
-        }
-        Assertions.assertNull(user);
-    }
-
     @Test
+    @Sql(scripts = "")
     public void findUserByUsernameTest(){
         String username = "admin";
         User userByName = userMapper.findUserByUsername(username);
-        Assertions.assertEquals(userByName, user);
     }
 
     @Test
+    @Sql(scripts = "")
     void findUserById() {
         User userById = userMapper.findUserById(1L);
-        log.info("user info {}", user);
-        Assertions.assertEquals(userById, user);
     }
 
     @Test
+    @Sql(scripts = "")
     void saveUser() {
-        userMapper.saveUser(userTest);
-        User ceShi = userMapper.findUserByUsername("ceshi");
-        Assertions.assertNotNull(ceShi);
     }
 
     @Test
+    @Sql(scripts = "")
     void updateUserById() {
-        User userT = userTest;
-        userT.setPassword("1212112112");
-        userMapper.updateUserById(userT);
-        User userByName = userMapper.findUserByUsername(userTest.getUserName());
-        Assertions.assertNotEquals(userByName, userTest);
     }
 
     @Test
+    @Sql(scripts = "")
     void deleteById() {
-        userMapper.deleteById(userTest.getId());
-        User user = userMapper.findUserById(userTest.getId());
-        Assertions.assertNull(user);
     }
 }

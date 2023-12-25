@@ -4,14 +4,14 @@ JAVA_HOME=/home/buercorp/apps/jdk
 JAVA_OPTS="-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/buercorp/logs/admin-api/heap-dump.hprof "
 
 JAR_PATH=/home/buercorp/deploy/admin-api/admin-api.jar
-JAR_OPTS="-Dspring.profiles.active=test -Dserver.port=8504"
+JAR_OPTS="-Dspring.profiles.active=test -Dserver.port=9101"
 
-TEST_URL=http://localhost:8504/actuator/health
+TEST_URL=http://localhost:9101/admin-api/actuator/health
 TEST_WAIT_SECONDS=10
 TEST_TRIES=10
 TEST_INTERVAL=5
 
-SHUTDOWN_URL=http://localhost:8504/actuator/shutdown
+SHUTDOWN_URL=http://localhost:9101/admin-api/actuator/shutdown
 
 
 # must left a empty line at the end
