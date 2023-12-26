@@ -5,4 +5,4 @@ spring:
     name: admin-api
 
 server:
-  port: 8504
+  port: 9101

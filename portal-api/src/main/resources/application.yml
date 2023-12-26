@@ -5,4 +5,4 @@ spring:
     name: protal-api
 
 server:
-  port: 8503
+  port: 9102
