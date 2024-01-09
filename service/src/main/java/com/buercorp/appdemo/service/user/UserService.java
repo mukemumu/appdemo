@@ -4,7 +4,6 @@ import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
-import jakarta.servlet.http.HttpServletRequest;
 
 /**
  * @description

@@ -2,8 +2,6 @@ package com.buercorp.appdemo.service.user;
 
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
-import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
@@ -11,14 +9,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpRequest;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author tanghx

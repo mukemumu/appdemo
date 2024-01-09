@@ -1,6 +1,8 @@
 package com.buercorp.appdemo.repository.manager;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.buercorp.appdemo.repository.manager.impl.UserManagerImpl;
 import com.buercorp.appdemo.repository.mapper.UserMapper;
 import com.buercorp.appdemo.repository.model.po.User;
 import lombok.extern.slf4j.Slf4j;
@@ -29,7 +31,7 @@ import static org.mockito.Mockito.when;
 @Slf4j
 @AutoConfigureMockMvc
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = UserManager.class)
+@SpringBootTest(classes = UserManagerImpl.class)
 class UserManagerTest {
 
     @MockBean
