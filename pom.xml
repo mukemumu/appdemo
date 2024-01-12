@@ -5,8 +5,16 @@
 
     <groupId>com.buercorp.appdemo</groupId>
     <artifactId>appdemo-be</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+
+    <name>appdemo-be</name>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+    </parent>
 
     <modules>
         <module>common</module>
@@ -17,16 +25,12 @@
         <module>task</module>
     </modules>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.5</version>
-    </parent>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring.version>3.0.5</spring.version>
         <mysql.verison>8.0.30</mysql.verison>
         <fastjson.version>2.0.21</fastjson.version>
         <lombok.version>1.18.20</lombok.version>
@@ -34,7 +38,7 @@
         <swagger.version>2.9.2</swagger.version>
         <swaggerui.version>2.9.2</swaggerui.version>
         <pagehelper.version>1.4.3</pagehelper.version>
-        <druid>1.0.18</druid>
+        <druid.version>1.2.21</druid.version>
         <springdoc.openapi.api>2.0.4</springdoc.openapi.api>
         <springdoc.openapi.ui>2.0.4</springdoc.openapi.ui>
         <hibernate.validator>8.0.0.Final</hibernate.validator>
@@ -42,6 +46,15 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- spring -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- mybatis和spring boot整合的起步依赖 -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -105,7 +118,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>${druid}</version>
+                <version>${druid.version}</version>
             </dependency>
 
             <!-- hibernate-validator 请求参数验证 -->
@@ -120,8 +133,20 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+                <configuration>
+                    <useSystemClassLoader>false</useSystemClassLoader>
+                    <testFailureIgnore>true</testFailureIgnore>
+                </configuration>
+            </plugin>
+
+            <!-- source code check:pmd -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.21.2</version>
             </plugin>
         </plugins>
     </build>

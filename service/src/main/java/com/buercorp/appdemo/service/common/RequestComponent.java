@@ -1,4 +1,4 @@
-package com.buercorp.appdemo.portalapi.utils;
+package com.buercorp.appdemo.service.common;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;

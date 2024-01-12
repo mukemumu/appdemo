@@ -6,7 +6,7 @@ import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
 import com.buercorp.appdemo.common.utils.LoginContextUtil;
-import com.buercorp.appdemo.portalapi.utils.ReflexUtil;
+import com.buercorp.appdemo.common.utils.ReflexUtil;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.LoginRequired;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
