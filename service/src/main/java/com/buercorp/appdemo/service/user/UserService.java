@@ -6,9 +6,8 @@ import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 
 /**
- * @description
- *
  * @author tanghx
+ * @description
  * @date 2023/12/4 15:23
  */
 public interface UserService {

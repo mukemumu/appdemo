@@ -1,4 +1,4 @@
-package com.buercorp.appdemo.portalapi.utils;
+package com.buercorp.appdemo.common.utils;
 
 import org.springframework.web.method.HandlerMethod;
 

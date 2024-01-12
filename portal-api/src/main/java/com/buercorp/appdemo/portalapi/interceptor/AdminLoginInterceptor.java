@@ -4,7 +4,7 @@ import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.AdminLoginRequired;
-import com.buercorp.appdemo.portalapi.utils.ReflexUtil;
+import com.buercorp.appdemo.common.utils.ReflexUtil;
 import com.mysql.cj.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
