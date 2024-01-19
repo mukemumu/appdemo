@@ -37,7 +37,7 @@ set_maven(){
 }
 
 set_repo(){
-	echo "正在配置maven仓库..."
+    echo "正在配置maven仓库..."
 	echo "---------------------------------"
     mkdir -p $maven_repo
     repo_num=$(grep -n "</localRepository>" "${maven_setting}" | cut -f1 -d':')
