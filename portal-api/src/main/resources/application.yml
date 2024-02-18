@@ -2,7 +2,11 @@ spring:
   profiles:
     active: dev
   application:
-    name: protal-api
+    name: portal-api
+
+#xpack.security.http.ssl:
+#  enable: false
+#  keystore.path: certs/http.p12
 
 server:
   port: 9102

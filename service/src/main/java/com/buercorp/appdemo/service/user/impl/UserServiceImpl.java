@@ -2,29 +2,31 @@ package com.buercorp.appdemo.service.user.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.buercorp.appdemo.common.exception.AppException;
+import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
+import com.buercorp.appdemo.repository.model.po.LoginToken;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
-import com.buercorp.appdemo.common.utils.MessageUtils;
 import com.buercorp.appdemo.repository.mapper.UserMapper;
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 import com.buercorp.appdemo.service.user.UserService;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
+//import org.springframework.data.elasticsearch.client.elc.ElasticsearchTemplate;
+//import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 
+import java.util.List;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author tanghx
@@ -40,43 +42,58 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+    private LoginTokenMapper loginTokenMapper;
 
-    @Autowired
-    private MessageUtils messageUtils;
+//    @Autowired
+//    private RedisTemplate<String, String> redisTemplate;
+
+//    @Autowired
+//    private ElasticsearchTemplate elasticsearchTemplate;
 
     /**
      * 用户登陆
-     *
      * @param loginDto
      * @return
      */
     @Override
+    @Transactional
     public LoginVo login(LoginDto loginDto, StringBuffer requestURL) {
+
+        // 根据用户名查询用户
         User user = userMapper.findUserByUsername(loginDto.getUsername());
 
         if (user == null) {
+            // 用户名不存在
             throw new LoginException(ErrorCode.LOGIN_ERROR_USERNAME);
         }
 
+        // 进行 md5 加密
         String password = loginDto.getPassword();
         String md5Password = DigestUtils.md5DigestAsHex(password.getBytes());
+
         if (!md5Password.equals(user.getPassword())) {
+            // 密码错误
             throw new LoginException(ErrorCode.LOGIN_ERROR_PASSWORD);
         }
 
-        int index = requestURL.indexOf("admin");
+//        int index = requestURL.indexOf("admin");
 
-        String token = UUID.randomUUID().toString().replace("-", "");
+        // 生成 login_token 信息
+        String login_token = UUID.randomUUID().toString().replace("-", "");
 
-        if (index == -1) {
-            redisTemplate.opsForValue().set(AppConstants.REDIS_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
-        } else {
-            redisTemplate.opsForValue().set(AppConstants.ADMIN_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
-        }
+        // 将 login_token 信息写入数据库
+        loginTokenMapper.saveLoginToken(new LoginToken(login_token, user.getId()));
+
+
+        // 将 login_token 写入缓存
+//        if (index == -1) {
+//            redisTemplate.opsForValue().set(AppConstants.REDIS_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
+//        } else {
+//            redisTemplate.opsForValue().set(AppConstants.ADMIN_TOKEN_PREFIX + token, JSON.toJSONString(user), 15, TimeUnit.MINUTES);
+//        }
 
         LoginVo loginVo = new LoginVo();
-        loginVo.setToken(token);
+        loginVo.setLogin_token(login_token);
         return loginVo;
     }
 
@@ -156,5 +173,29 @@ public class UserServiceImpl implements UserService {
 
         // 删除
         userMapper.deleteById(id);
+    }
+
+    /**
+     * 向 Elasticsearch 添加信息
+     * @param user
+     * @return
+     */
+//    @Override
+//    public User insert(User user) {
+//
+//        IndexCoordinates indexCoordinates = IndexCoordinates.of();
+//
+//        User save = elasticsearchTemplate.save(user, indexCoordinates);
+//        return null;
+//    }
+
+    /**
+     * 获取所有用户信息
+     * @return
+     */
+    @Override
+    public List<User> getAll() {
+        List<User> userList = userMapper.getAll();
+        return userList;
     }
 }

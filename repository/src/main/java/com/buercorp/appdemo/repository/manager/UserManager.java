@@ -13,4 +13,6 @@ public interface UserManager {
     User getUser(Long userId);
 
     User getUser(String username);
+
+    Long getUserID(String loginToken);
 }

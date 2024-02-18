@@ -31,6 +31,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring.version>3.0.5</spring.version>
+        <spring-boot-starter-test.version>3.0.5</spring-boot-starter-test.version>
+        <spring-boot-starter-web.version>3.0.5</spring-boot-starter-web.version>
+        <spring-boot-starter-log4j2.version>3.0.5</spring-boot-starter-log4j2.version>
+        <spring-boot-starter-actuator.version>3.0.5</spring-boot-starter-actuator.version>
         <mysql.verison>8.0.30</mysql.verison>
         <fastjson.version>2.0.21</fastjson.version>
         <lombok.version>1.18.20</lombok.version>
@@ -42,6 +46,9 @@
         <springdoc.openapi.api>2.0.4</springdoc.openapi.api>
         <springdoc.openapi.ui>2.0.4</springdoc.openapi.ui>
         <hibernate.validator>8.0.0.Final</hibernate.validator>
+        <fasterxml.jackson.version>2.12.3</fasterxml.jackson.version>
+        <jackson-databind.version>2.12.3</jackson-databind.version>
+
     </properties>
 
     <dependencyManagement>
@@ -53,6 +60,34 @@
                 <version>${spring.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- spring Web -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter-web.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>${spring-boot-starter-actuator.version}</version>
+            </dependency>
+
+            <!-- spring test -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-starter-test.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- 日志 log4j2 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${spring-boot-starter-log4j2.version}</version>
             </dependency>
 
             <!-- mybatis和spring boot整合的起步依赖 -->
@@ -126,6 +161,26 @@
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate.validator}</version>
+            </dependency>
+
+            <!-- h2 数据库 -->
+<!--            <dependency>-->
+<!--                <groupId>com.h2database</groupId>-->
+<!--                <artifactId>h2</artifactId>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+
+<!--            &lt;!&ndash; 整合 Elasticsearch &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--                <artifactId>jackson-databind</artifactId>-->
+<!--                <version>${fasterxml.jackson.version}</version>-->
+<!--            </dependency>-->
+            <!--  JSON 对象映射库 -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

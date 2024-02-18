@@ -44,7 +44,7 @@ class UserServiceTest {
     @Test
     void login() {
         LoginVo login = userService.login(loginDto, requestUrl);
-        setToken(login.getToken());
+        setToken(login.getLogin_token());
         Assertions.assertNotNull(login);
         log.info("token:{}", token);
     }

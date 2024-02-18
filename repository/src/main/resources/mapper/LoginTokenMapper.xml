@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace：命名空间 -->
+<mapper namespace="com.buercorp.appdemo.repository.mapper.LoginTokenMapper">
+
+    <sql id="columns">
+        id, login_token, user_id, expire_time, create_time, update_time
+    </sql>
+
+    <!-- 写入 token 信息 -->
+    <insert id="saveLoginToken">
+        insert into login_token (login_token, user_id, expire_time, create_time)
+        values (#{loginToken}, #{userId}, #{expireTime}, now())
+    </insert>
+
+    <!-- 根据 login_token 查询 user_id -->
+    <select id="getUserId" resultType="java.lang.Long">
+        select user_id
+        from login_token
+        where login_token = #{loginToken}
+    </select>
+
+    <!-- 获取 login_token 对应的所有信息 -->
+    <select id="getLoginToken" resultType="com.buercorp.appdemo.repository.model.po.LoginToken">
+        select <include refid="columns"/>
+        from login_token
+        where login_token = #{loginToken}
+    </select>
+
+    <!-- 更新过期时间 -->
+    <update id="updateExpirationTime">
+        update login_token set
+        expire_time = newExpirationTime,
+        update_time = now()
+        where login_token = #{loginToken}
+    </update>
+</mapper>

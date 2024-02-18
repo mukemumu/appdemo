@@ -13,7 +13,7 @@ public class AppConstants {
     public static final String ADMIN_TOKEN_PREFIX = "admin.login.token";
 
     // redis 中普通用户的 token 前缀
-    public static final String REDIS_TOKEN_PREFIX = "user.login.token:";
+    public static final String REDIS_TOKEN_PREFIX = "user.login.token";
 
     // RequestContextHolder 中登陆的普通用户信息属性名
     public static final String LOGIN_USER = "Login_user";

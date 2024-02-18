@@ -3,6 +3,8 @@ package com.buercorp.appdemo.repository.mapper;
 import com.buercorp.appdemo.repository.model.po.User;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @description User mapper 接口
  *
@@ -20,4 +22,7 @@ public interface UserMapper {
     void updateUserById(User user);
 
     void deleteById(Long id);
+
+    List<User> getAll();
+
 }

@@ -57,4 +57,11 @@
         delete from sys_user
         where id = #{id}
     </delete>
+
+    <!-- 获取所有用户信息 -->
+    <select id="getAll" resultType="com.buercorp.appdemo.repository.model.po.User">
+        select <include refid="columns"/>
+        from sys_user
+        where is_deleted = 0
+    </select>
 </mapper>
