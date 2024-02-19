@@ -5,12 +5,12 @@ import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.AdminLoginRequired;
 import com.buercorp.appdemo.common.utils.ReflexUtil;
+import com.buercorp.appdemo.service.login_token.LoginTokenService;
 import com.mysql.cj.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -31,7 +31,8 @@ import java.util.concurrent.TimeUnit;
 public class AdminLoginInterceptor implements HandlerInterceptor {
 
     @Autowired
-    private RedisTemplate<String, String> redisTemplate;
+    private LoginTokenService loginTokenService;
+
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -47,16 +48,27 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        String token = request.getHeader("token");
-        String userInfo = redisTemplate.opsForValue().get(AppConstants.ADMIN_TOKEN_PREFIX + token);
-
-        if (StringUtils.isNullOrEmpty(userInfo)){
+        // login_token 不能为空
+        String login_token = request.getHeader("admin_login_token");
+        if (StringUtils.isNullOrEmpty(login_token)){
+            // 登录令牌不存在或者已经过期
             throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
 
+        // 根据 login_token 获取用户信息，判断是否失效
+        if (loginTokenService.isInvalid(login_token)){
+            // 登录令牌不存在或者已经过期
+            throw new LoginException(ErrorCode.LOGIN_AUTH);
+        }
+
+        // 获取用户信息
+        String userInfo = loginTokenService.getUserInfo(login_token);
+
+        // 将完成登陆的用户信息放入 RequestContextHolder 中
         RequestContextHolder.currentRequestAttributes().setAttribute(AppConstants.ADMIN_LOGIN_USER, userInfo, RequestAttributes.SCOPE_REQUEST);
 
-        redisTemplate.expire(AppConstants.ADMIN_TOKEN_PREFIX + token, 15, TimeUnit.MINUTES);
+        // 更新过期时间
+        loginTokenService.updateExpirationTime(login_token);
 
         return true;
     }

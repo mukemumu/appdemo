@@ -5,6 +5,8 @@ import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 
+import java.util.List;
+
 /**
  * @author tanghx
  * @description
@@ -21,4 +23,8 @@ public interface UserService {
     void updateUser(User user);
 
     void deleteById(Long id);
+
+//    User insert(User user);
+
+    List<User> getAll();
 }

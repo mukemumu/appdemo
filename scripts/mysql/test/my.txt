@@ -1,0 +1,115 @@
+[mysql]
+# 默认字符集
+default-character-set=utf8mb4
+
+[client]
+# 客户端使用的端口号
+port=3306
+# 客户端连接的 socket 路径
+socket=/tmp/mysql.sock
+
+[mysqld]
+# 服务端使用的端口号
+port=3306
+# 服务器 ID
+server-id=3306
+# MySQL 运行用户
+# user=buercorp
+# 日志时间系统时间
+log_timestamps=SYSTEM
+# 默认时区东八区
+default-time_zone='+8:00'
+# 服务器连接的 socket 路径
+socket=/tmp/mysql.sock
+# MySQL 安装目录
+basedir=/home/buercorp/apps/mysql
+# 数据存放目录
+datadir=/home/buercorp/apps/mysql/data
+# 开启二进制日志功能
+log-bin=/home/buercorp/apps/mysql/mysql-bin
+# InnoDB 数据文件存放目录
+innodb_data_home_dir=/home/buercorp/apps/mysql/data
+# InnoDB 日志文件存放目录
+innodb_log_group_home_dir=/home/buercorp/apps/mysql/data
+# MySQL 错误日志文件路径
+log-error=/home/buercorp/apps/mysql/data/mysql.log
+# 存放 MySQL 进程 ID 的文件路径
+pid-file=/home/buercorp/apps/mysql/data/mysql.pid
+# 表名大小写不敏感
+lower_case_table_names=1
+# 服务端字符集
+character-set-server=utf8mb4
+# 自动提交所有事务
+autocommit=1
+# 跳过排它锁定
+skip-external-locking
+# 键缓存大小
+key_buffer_size=256M
+# 允许的最大数据包大小
+max_allowed_packet=1M
+# 表缓存
+table_open_cache=1024
+# 排序缓存大小
+sort_buffer_size=4M
+# 网络缓冲区长度
+net_buffer_length=8K
+# 读取缓冲区大小
+read_buffer_size=4M
+# 随机读取缓冲区大小
+read_rnd_buffer_size=512K
+# MyISAM 排序缓冲区大小
+myisam_sort_buffer_size=64M
+# 线程缓存大小
+thread_cache_size=128
+# 临时表大小
+tmp_table_size=128M
+# 启用显式默认时间戳
+explicit_defaults_for_timestamp=true
+# 最大连接数
+max_connections=500
+# 连接错误最大数量
+max_connect_errors=100
+# 打开文件限制
+open_files_limit=65535
+# 二进制日志格式
+binlog_format=mixed
+# 二进制日志过期时间（秒）
+binlog_expire_logs_seconds=864000
+# 创建表时使用的默认存储引擎
+default_storage_engine=InnoDB
+# InnoDB 数据文件路径设置
+innodb_data_file_path=ibdata1:10M:autoextend
+# InnoDB 缓冲池大小
+innodb_buffer_pool_size=1024M
+# InnoDB 日志文件大小
+innodb_log_file_size=256M
+# InnoDB 日志缓冲区大小
+innodb_log_buffer_size=8M
+# InnoDB 每次提交时刷新日志
+innodb_flush_log_at_trx_commit=1
+# InnoDB 加锁等待超时时间（秒）
+innodb_lock_wait_timeout=50
+# 事务隔离级别为不可重复读
+transaction-isolation=REPEATABLE-READ
+
+[mysqldump]
+# 快速导出数据
+quick
+# 允许的最大数据包大小
+max_allowed_packet=16M
+# 套接字
+socket=/tmp/mysql.sock
+
+[myisamchk]
+# 键缓存大小
+key_buffer_size=256M
+# 排序缓冲区大小
+sort_buffer_size=4M
+# 读取缓冲区大小
+read_buffer=2M
+# 写入缓冲区大小
+write_buffer=2M
+
+[mysqlhotcopy]
+# 交互式超时时间
+interactive-timeout

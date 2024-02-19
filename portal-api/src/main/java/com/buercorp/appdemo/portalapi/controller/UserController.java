@@ -2,7 +2,6 @@ package com.buercorp.appdemo.portalapi.controller;
 
 import com.buercorp.appdemo.portalapi.interceptor.annotation.LocaleRequired;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.LoginRequired;
-import com.buercorp.appdemo.portalapi.interceptor.annotation.NotLogin;
 import com.buercorp.appdemo.service.common.RequestComponent;
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.po.User;
@@ -23,7 +22,6 @@ import org.springframework.web.bind.annotation.*;
  */
 
 @Slf4j
-@LoginRequired      // 登陆拦截
 @LocaleRequired     // 语言环境拦截
 @RestController
 @RequestMapping(value = "/user")
@@ -40,7 +38,6 @@ public class UserController {
      * @param loginDto
      * @return
      */
-    @NotLogin       // 不拦截登陆请求
     @PostMapping(value = "/login")
     public LoginVo login(@RequestBody @Validated LoginDto loginDto){
         StringBuffer requestURL = requestComponent.getRequest().getRequestURL();
@@ -53,10 +50,9 @@ public class UserController {
      * @param token
      * @return
      */
-
-
+    @LoginRequired
     @GetMapping(value = "/getUserInfo")
-    public UserInfoVo getUserInfo(@RequestHeader(name = "token") String token){
+    public UserInfoVo getUserInfo(@RequestHeader(name = "login_token") String token){
         StringBuffer requestURL = requestComponent.getRequest().getRequestURL();
         UserInfoVo userInfo = userService.getUserInfo(token, requestURL);
         return userInfo;
@@ -66,6 +62,7 @@ public class UserController {
      * 新增用户
      * @param user
      */
+    @LoginRequired
     @PostMapping(value = "/saveUser")
     public void saveUser(@RequestBody @Validated User user){
         userService.saveUser(user);
@@ -75,6 +72,7 @@ public class UserController {
      * 修改用户信息
      * @param user
      */
+    @LoginRequired
     @PutMapping(value = "/updateSysUser")
     public void updateSysUser(@RequestBody @Validated User user) {
         userService.updateUser(user);
@@ -84,6 +82,7 @@ public class UserController {
      * 删除用户信息
      * @param id
      */
+    @LoginRequired
     @DeleteMapping(value = "/deleteUserById/{userId}")
     public void deleteUserById(@PathVariable(value = "userId") Long id){
         userService.deleteById(id);
