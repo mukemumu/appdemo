@@ -1,9 +1,10 @@
-package com.buercorp.appdemo.portalapi.interceptor;
+package com.buercorp.appdemo.adminapi.interceptor;
 
+import com.buercorp.appdemo.adminapi.interceptor.annotation.AdminLoginRequired;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
-import com.buercorp.appdemo.portalapi.interceptor.annotation.AdminLoginRequired;
+
 import com.buercorp.appdemo.common.utils.ReflexUtil;
 import com.buercorp.appdemo.service.login_token.LoginTokenService;
 import com.mysql.cj.util.StringUtils;
@@ -17,7 +18,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import java.util.concurrent.TimeUnit;
+import static com.buercorp.appdemo.common.constants.AppHeaders.ADMIN_LOGIN_TOKEN;
 
 /**
  * @description admin 登陆验证
@@ -47,8 +48,9 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
         }
 
         // login_token 不能为空
-        String login_token = request.getHeader("admin_login_token");
+        String login_token = request.getHeader(ADMIN_LOGIN_TOKEN);
         if (StringUtils.isNullOrEmpty(login_token)){
+            log.warn("AdminLoginInterceptor login_token is empty, url: " + request.getRequestURL().toString());
             // 登录令牌不存在或者已经过期
             throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
@@ -56,6 +58,7 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
         // 根据 login_token 获取用户信息，判断是否失效
         if (loginTokenService.isInvalid(login_token)){
             // 登录令牌不存在或者已经过期
+            log.warn("AdminLoginInterceptor login_token is not valid, url: " + request.getRequestURL().toString());
             throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
 

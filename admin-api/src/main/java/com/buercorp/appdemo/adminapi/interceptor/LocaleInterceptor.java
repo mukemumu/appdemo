@@ -1,10 +1,11 @@
-package com.buercorp.appdemo.portalapi.interceptor;
+package com.buercorp.appdemo.adminapi.interceptor;
 
-import com.mysql.cj.util.StringUtils;
+import com.buercorp.appdemo.adminapi.interceptor.annotation.LocaleRequired;
 import com.buercorp.appdemo.common.constants.AppConstants;
-import com.buercorp.appdemo.portalapi.interceptor.annotation.LocaleRequired;
 import com.buercorp.appdemo.common.utils.ReflexUtil;
+
 import com.buercorp.appdemo.service.common.RequestComponent;
+import com.mysql.cj.util.StringUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;

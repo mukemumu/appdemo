@@ -2,8 +2,8 @@
 ## 项目运行环境
 * JDK: 17
 * SpringBoot: 3.0.5
-* maven: 3.6.3
-* mysql: 3.9.5
+* maven: 3.9.5
+* mysql: 8.0.30
 
 ## 项目功能完善
 ### 整合 mybatis 逆向工程 

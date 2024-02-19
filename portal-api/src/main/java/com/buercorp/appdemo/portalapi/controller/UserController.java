@@ -1,7 +1,7 @@
 package com.buercorp.appdemo.portalapi.controller;
 
 import com.buercorp.appdemo.portalapi.interceptor.annotation.LocaleRequired;
-import com.buercorp.appdemo.portalapi.interceptor.annotation.LoginRequired;
+import com.buercorp.appdemo.portalapi.interceptor.annotation.UserLoginRequired;
 import com.buercorp.appdemo.service.common.RequestComponent;
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
 import com.buercorp.appdemo.repository.model.po.User;
@@ -50,7 +50,7 @@ public class UserController {
      * @param token
      * @return
      */
-    @LoginRequired
+    @UserLoginRequired
     @GetMapping(value = "/getUserInfo")
     public UserInfoVo getUserInfo(@RequestHeader(name = "login_token") String token){
         StringBuffer requestURL = requestComponent.getRequest().getRequestURL();
@@ -62,7 +62,7 @@ public class UserController {
      * 新增用户
      * @param user
      */
-    @LoginRequired
+    @UserLoginRequired
     @PostMapping(value = "/saveUser")
     public void saveUser(@RequestBody @Validated User user){
         userService.saveUser(user);
@@ -72,7 +72,7 @@ public class UserController {
      * 修改用户信息
      * @param user
      */
-    @LoginRequired
+    @UserLoginRequired
     @PutMapping(value = "/updateSysUser")
     public void updateSysUser(@RequestBody @Validated User user) {
         userService.updateUser(user);
@@ -82,7 +82,7 @@ public class UserController {
      * 删除用户信息
      * @param id
      */
-    @LoginRequired
+    @UserLoginRequired
     @DeleteMapping(value = "/deleteUserById/{userId}")
     public void deleteUserById(@PathVariable(value = "userId") Long id){
         userService.deleteById(id);

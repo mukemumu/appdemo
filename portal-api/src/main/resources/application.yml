@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: localhost
+    active: local
   application:
     name: portal-api
 

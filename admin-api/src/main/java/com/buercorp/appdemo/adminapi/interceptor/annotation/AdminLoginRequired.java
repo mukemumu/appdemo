@@ -1,4 +1,4 @@
-package com.buercorp.appdemo.portalapi.interceptor.annotation;
+package com.buercorp.appdemo.adminapi.interceptor.annotation;
 
 import java.lang.annotation.*;
 

@@ -1,25 +1,17 @@
 package com.buercorp.appdemo.portalapi.interceptor;
 
-import com.buercorp.appdemo.repository.manager.UserManager;
-import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
-import com.buercorp.appdemo.repository.model.po.LoginToken;
-import com.buercorp.appdemo.repository.model.po.User;
-import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 import com.buercorp.appdemo.service.login_token.LoginTokenService;
-import com.buercorp.appdemo.service.user.UserService;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
 import com.buercorp.appdemo.common.utils.LoginContextUtil;
 import com.buercorp.appdemo.common.utils.ReflexUtil;
-import com.buercorp.appdemo.portalapi.interceptor.annotation.LoginRequired;
+import com.buercorp.appdemo.portalapi.interceptor.annotation.UserLoginRequired;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 //import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
@@ -27,8 +19,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
+import static com.buercorp.appdemo.common.constants.AppHeaders.USER_LOGIN_TOKEN;
 
 /**
  * @description protal-api 登陆拦截器
@@ -39,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Component
-public class LoginInterceptor implements HandlerInterceptor {
+public class UserLoginInterceptor implements HandlerInterceptor {
 
     @Autowired
     private LoginTokenService loginTokenService;
@@ -54,14 +45,14 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 获取注解信息
         HandlerMethod handlerMethod = (HandlerMethod) handler;
 
-        LoginRequired loginRequired = ReflexUtil.getClazzOrMethodAnnotation(handlerMethod, LoginRequired.class);
+        UserLoginRequired userLoginRequired = ReflexUtil.getClazzOrMethodAnnotation(handlerMethod, UserLoginRequired.class);
 
-        if (loginRequired == null) {     // 没有特定注解，不拦截请求
+        if (userLoginRequired == null) {     // 没有特定注解，不拦截请求
             return true;
         }
 
         // 从请求中获取 login_token 信息
-        String login_token = request.getHeader("login_token");
+        String login_token = request.getHeader(USER_LOGIN_TOKEN);
 
         // login_token 不能为空
         if (StringUtils.isNullOrEmpty(login_token)){
