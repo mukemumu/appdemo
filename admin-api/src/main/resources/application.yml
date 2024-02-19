@@ -1,12 +1,8 @@
 spring:
   profiles:
-    active: dev
+    active: localhost
   application:
     name: admin-api
 
 server:
   port: 9101
-
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html

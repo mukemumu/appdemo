@@ -12,11 +12,30 @@ import java.util.Date;
  */
 @Mapper
 public interface LoginTokenMapper {
-    void saveLoginToken(LoginToken loginToken);
 
     long getUserId(String loginToken);
 
     LoginToken getLoginToken(String loginToken);
 
-    void updateExpirationTime(String loginToken, Date newExpirationTime);
+    int deleteByPrimaryKey(Long id);
+
+    int insert(LoginToken row);
+
+    /**
+     * 选择插入
+     * @param row
+     * @return
+     */
+    int insertSelective(LoginToken row);
+
+    LoginToken selectByPrimaryKey(Long id);
+
+    /**
+     * 根据主键选择性更新
+     * @param row
+     * @return
+     */
+    int updateByPrimaryKeySelective(LoginToken row);
+
+    int updateByPrimaryKey(LoginToken row);
 }

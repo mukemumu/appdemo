@@ -19,7 +19,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import java.util.concurrent.TimeUnit;
 
-
 /**
  * @description admin 登陆验证
  *
@@ -32,7 +31,6 @@ public class AdminLoginInterceptor implements HandlerInterceptor {
 
     @Autowired
     private LoginTokenService loginTokenService;
-
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

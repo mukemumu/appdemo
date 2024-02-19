@@ -82,7 +82,7 @@ public class UserServiceImpl implements UserService {
         String login_token = UUID.randomUUID().toString().replace("-", "");
 
         // 将 login_token 信息写入数据库
-        loginTokenMapper.saveLoginToken(new LoginToken(login_token, user.getId()));
+        loginTokenMapper.insert(new LoginToken(login_token,user.getId()));
 
 
         // 将 login_token 写入缓存

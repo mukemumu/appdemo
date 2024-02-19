@@ -1,40 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-<!-- namespace：命名空间 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.buercorp.appdemo.repository.mapper.LoginTokenMapper">
+  <resultMap id="BaseResultMap" type="com.buercorp.appdemo.repository.model.po.LoginToken">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="login_token" jdbcType="VARCHAR" property="loginToken" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
 
-    <sql id="columns">
-        id, login_token, user_id, expire_time, create_time, update_time
-    </sql>
+  <sql id="Base_Column_List">
+    id, login_token, user_id, expire_time, create_time, update_time
+  </sql>
 
-    <!-- 写入 token 信息 -->
-    <insert id="saveLoginToken">
-        insert into login_token (login_token, user_id, expire_time, create_time)
-        values (#{loginToken}, #{userId}, #{expireTime}, now())
-    </insert>
+  <!-- 根据主键查询 -->
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from login_token
+    where id = #{id,jdbcType=BIGINT}
+  </select>
 
-    <!-- 根据 login_token 查询 user_id -->
-    <select id="getUserId" resultType="java.lang.Long">
-        select user_id
-        from login_token
-        where login_token = #{loginToken}
-    </select>
+  <!-- 根据 login_token 查询 user_id -->
+  <select id="getUserId" parameterType="java.lang.String" resultType="java.lang.Long">
+    select user_id
+    from login_token
+    where login_token = #{loginToken,jdbcType=VARCHAR}
+  </select>
 
-    <!-- 获取 login_token 对应的所有信息 -->
-    <select id="getLoginToken" resultType="com.buercorp.appdemo.repository.model.po.LoginToken">
-        select <include refid="columns"/>
-        from login_token
-        where login_token = #{loginToken}
-    </select>
+  <!-- 获取 login_token 对应的所有信息 -->
+  <select id="getLoginToken" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from login_token
+    where login_token = #{loginToken,jdbcType=VARCHAR}
+  </select>
 
-    <!-- 更新过期时间 -->
-    <update id="updateExpirationTime">
-        update login_token set
-        expire_time = newExpirationTime,
-        update_time = now()
-        where login_token = #{loginToken}
-    </update>
+  <!-- 根据主键删除 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from login_token
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+
+  <!-- 插入完整数据 -->
+  <insert id="insert" parameterType="com.buercorp.appdemo.repository.model.po.LoginToken">
+    insert into login_token (id, login_token, user_id, 
+      expire_time, create_time, update_time
+      )
+    values (#{id,jdbcType=BIGINT}, #{loginToken,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT}, 
+      #{expireTime,jdbcType=TIMESTAMP}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+
+  <!-- 选择性查询数据 -->
+  <insert id="insertSelective" parameterType="com.buercorp.appdemo.repository.model.po.LoginToken">
+    insert into login_token
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="loginToken != null">
+        login_token,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="expireTime != null">
+        expire_time,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="loginToken != null">
+        #{loginToken,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="expireTime != null">
+        #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 选择性更新数据 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.buercorp.appdemo.repository.model.po.LoginToken">
+    update login_token
+    <set>
+      <if test="loginToken != null">
+        login_token = #{loginToken,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="expireTime != null">
+        expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <!-- 根据主键更新完整数据 -->
+  <update id="updateByPrimaryKey" parameterType="com.buercorp.appdemo.repository.model.po.LoginToken">
+    update login_token
+    set login_token = #{loginToken,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=BIGINT},
+      expire_time = #{expireTime,jdbcType=TIMESTAMP},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
 </mapper>

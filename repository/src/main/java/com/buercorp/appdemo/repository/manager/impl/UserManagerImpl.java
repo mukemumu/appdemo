@@ -14,13 +14,10 @@ import org.springframework.stereotype.Component;
  * @date 2023/12/4 10:07
  */
 @Component
-public class UserManagerImpl implements UserManager {
+public class  UserManagerImpl implements UserManager {
 
     @Autowired
     private UserMapper userMapper;
-
-    @Autowired
-    private LoginTokenMapper loginTokenMapper;
 
     @Override
     public User getUser(Long userId) {
@@ -32,16 +29,5 @@ public class UserManagerImpl implements UserManager {
     public User getUser(String username) {
         User user = userMapper.findUserByUsername(username);
         return user;
-    }
-
-    /**
-     * 根据用户提供的 login_token 从 login_token 表中查询 user_id
-     * @param loginToken
-     * @return
-     */
-    @Override
-    public Long getUserID(String loginToken) {
-        long userId = loginTokenMapper.getUserId(loginToken);
-        return userId;
     }
 }

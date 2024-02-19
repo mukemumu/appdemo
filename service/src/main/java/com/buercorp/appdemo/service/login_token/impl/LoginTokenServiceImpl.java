@@ -1,5 +1,6 @@
 package com.buercorp.appdemo.service.login_token.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.buercorp.appdemo.repository.manager.UserManager;
 import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
 import com.buercorp.appdemo.repository.model.po.LoginToken;
@@ -46,9 +47,8 @@ public class LoginTokenServiceImpl implements LoginTokenService {
      */
     @Override
     public String getUserInfo(String loginToken) {
-        User user = userManager.getUser(userManager.getUserID(loginToken));
-        log.info(user.toString());
-        return user.toString();
+        User user = userManager.getUser(loginTokenMapper.getUserId(loginToken));
+        return JSON.toJSONString(user);
     }
 
     /**
@@ -57,9 +57,15 @@ public class LoginTokenServiceImpl implements LoginTokenService {
     @Override
     @Transactional
     public void updateExpirationTime(String loginToken) {
+        // 确认更新对象
+        LoginToken lt = loginTokenMapper.getLoginToken(loginToken);
+
+        // 更新时间
         Calendar calendar = Calendar.getInstance();
-        calendar.add(30, Calendar.MINUTE);
-        loginTokenMapper.updateExpirationTime(loginToken, calendar.getTime());
+        calendar.add(Calendar.MINUTE, 30);
+        lt.setExpireTime(calendar.getTime());
+
+        loginTokenMapper.updateByPrimaryKeySelective(lt);
     }
 
     /**
