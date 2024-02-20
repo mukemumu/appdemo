@@ -57,6 +57,7 @@
     </dependencies>
 
     <build>
+        <finalName>repository</finalName>
         <plugins>
             <plugin>
                 <groupId>org.mybatis.generator</groupId>

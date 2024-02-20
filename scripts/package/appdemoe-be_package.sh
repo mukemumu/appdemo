@@ -60,10 +60,10 @@ main() {
 
     # 这里根据实际的jar包名和位置进行拷贝
     package_and_deploy "admin-api" "admin-api.jar"
-    package_and_deploy "common" "common-1.0-SNAPSHOT.jar"
+    package_and_deploy "common" "common.jar"
     package_and_deploy "portal-api" "portal-api.jar"
-    package_and_deploy "repository" "repository-1.0-SNAPSHOT.jar"
-    package_and_deploy "service" "service-1.0-SNAPSHOT.jar"
+    package_and_deploy "repository" "repository.jar"
+    package_and_deploy "service" "service.jar"
     package_and_deploy "task" "task.jar"
 
     echo "所有jar包均已存放至部署目录"

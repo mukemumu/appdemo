@@ -77,4 +77,8 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <finalName>common</finalName>
+    </build>
 </project>
