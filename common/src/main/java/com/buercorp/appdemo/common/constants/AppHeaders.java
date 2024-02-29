@@ -11,7 +11,6 @@ public class AppHeaders {
 
     public static final String USER_LOGIN_TOKEN = "X-USER-LOGIN-TOKEN";
 
-
     public static final String ADMIN_LOGIN_TOKEN = "X-ADMIN-LOGIN-TOKEN";
 
 

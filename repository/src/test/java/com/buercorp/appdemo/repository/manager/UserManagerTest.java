@@ -6,7 +6,6 @@ import com.buercorp.appdemo.repository.manager.impl.UserManagerImpl;
 import com.buercorp.appdemo.repository.mapper.UserMapper;
 import com.buercorp.appdemo.repository.model.po.User;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -43,7 +41,7 @@ class UserManagerTest {
     @Test
     void testGetUserById() {
         User user = new User();
-        user.setUserName("admin");
+        user.setUsername("admin");
 
 //        userMapper = mock(UserMapper.class);
 
@@ -53,6 +51,6 @@ class UserManagerTest {
         // 真实调用
         User user_test = userManager.getUser(1L);
 
-        assertEquals(user.getUserName(), user_test.getUserName());
+        assertEquals(user.getUsername(), user_test.getUsername());
     }
 }

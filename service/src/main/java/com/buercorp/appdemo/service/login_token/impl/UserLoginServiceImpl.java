@@ -2,10 +2,10 @@ package com.buercorp.appdemo.service.login_token.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.buercorp.appdemo.repository.manager.UserManager;
-import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
-import com.buercorp.appdemo.repository.model.po.LoginToken;
+import com.buercorp.appdemo.repository.mapper.UserLoginMapper;
 import com.buercorp.appdemo.repository.model.po.User;
-import com.buercorp.appdemo.service.login_token.LoginTokenService;
+import com.buercorp.appdemo.repository.model.po.UserLogin;
+import com.buercorp.appdemo.service.login_token.UserLoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,33 +21,33 @@ import java.util.Date;
  */
 @Slf4j
 @Service
-public class LoginTokenServiceImpl implements LoginTokenService {
+public class UserLoginServiceImpl implements UserLoginService {
 
     @Autowired
-    private LoginTokenMapper loginTokenMapper;
+    private UserLoginMapper userLoginMapper;
 
     @Autowired
     private UserManager userManager;
 
     /**
      * 获取 login_token 表中的一行数据
-     * @param loginToken
+     * @param userLoginToken
      * @return
      */
     @Override
-    public LoginToken getLoginToken(String loginToken) {
-        LoginToken info = loginTokenMapper.getLoginToken(loginToken);
+    public UserLogin getLoginToken(String userLoginToken) {
+        UserLogin info = userLoginMapper.getLoginToken(userLoginToken);
         return info;
     }
 
     /**
      * 获取 login_token 对应的用户信息
-     * @param loginToken
+     * @param userLoginToken
      * @return
      */
     @Override
-    public String getUserInfo(String loginToken) {
-        User user = userManager.getUser(loginTokenMapper.getUserId(loginToken));
+    public String getUserInfo(String userLoginToken) {
+        User user = userManager.getUser(userLoginMapper.getUserId(userLoginToken));
         return JSON.toJSONString(user);
     }
 
@@ -56,26 +56,26 @@ public class LoginTokenServiceImpl implements LoginTokenService {
      */
     @Override
     @Transactional
-    public void updateExpirationTime(String loginToken) {
+    public void updateExpirationTime(String userLoginToken) {
         // 确认更新对象
-        LoginToken lt = loginTokenMapper.getLoginToken(loginToken);
+        UserLogin lt = userLoginMapper.getLoginToken(userLoginToken);
 
         // 更新时间
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.MINUTE, 30);
         lt.setExpireTime(calendar.getTime());
 
-        loginTokenMapper.updateByPrimaryKeySelective(lt);
+        userLoginMapper.updateByPrimaryKeySelective(lt);
     }
 
     /**
      * 根据 login_token 判断是否失效
-     * @param loginToken
+     * @param userLoginToken
      * @return
      */
     @Override
-    public boolean isInvalid(String loginToken) {
-        LoginToken info = getLoginToken(loginToken);
+    public boolean isInvalid(String userLoginToken) {
+        UserLogin info = getLoginToken(userLoginToken);
 
         // 当前时间
         Date currentTime = new Date();

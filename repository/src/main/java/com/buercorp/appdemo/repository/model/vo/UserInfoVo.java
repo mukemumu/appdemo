@@ -14,22 +14,13 @@ import java.util.Date;
 public class UserInfoVo{
     private String username;
 
-    private String name;
+    private String birthday;
 
     private String phone;
 
-    private String avatar;
-
-    private Date createTime;
-
-    private Date updateTime;
-
     public UserInfoVo(User user){
-        username = user.getUserName();
-        name = user.getName();
+        username = user.getUsername();
         phone = user.getPhone();
-        avatar = user.getAvatar();
-        createTime = user.getCreateTime();
-        updateTime = user.getUpdateTime();
+        birthday = user.getBirthday();
     }
 }
