@@ -10,6 +10,6 @@ import lombok.Data;
  */
 @Data
 public class LoginVo{
-    private String login_token;
+    private String user_login_token;
     private String refresh_token;
 }

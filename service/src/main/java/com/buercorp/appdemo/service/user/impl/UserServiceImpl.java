@@ -2,15 +2,15 @@ package com.buercorp.appdemo.service.user.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.buercorp.appdemo.common.exception.AppException;
-import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
-import com.buercorp.appdemo.repository.model.po.LoginToken;
+import com.buercorp.appdemo.repository.mapper.UserLoginMapper;
+import com.buercorp.appdemo.repository.mapper.UserMapper;
+import com.buercorp.appdemo.repository.model.po.User;
+import com.buercorp.appdemo.repository.model.po.UserLogin;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
 import com.buercorp.appdemo.common.exception.LoginException;
-import com.buercorp.appdemo.repository.mapper.UserMapper;
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
-import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 import com.buercorp.appdemo.service.user.UserService;
@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Autowired
-    private LoginTokenMapper loginTokenMapper;
+    private UserLoginMapper userLoginMapper;
 
 //    @Autowired
 //    private RedisTemplate<String, String> redisTemplate;
@@ -68,10 +68,18 @@ public class UserServiceImpl implements UserService {
         }
 
         // 进行 md5 加密
-        String password = loginDto.getPassword();
-        String md5Password = DigestUtils.md5DigestAsHex(password.getBytes());
+//        String password = loginDto.getPassword();
+//        String md5Password = DigestUtils.md5DigestAsHex(password.getBytes());
+//
+//        if (!md5Password.equals(user.getPassword())) {
+//            // 密码错误
+//            throw new LoginException(ErrorCode.LOGIN_ERROR_PASSWORD);
+//        }
 
-        if (!md5Password.equals(user.getPassword())) {
+        // 未加密的密码
+        String password = loginDto.getPassword();
+
+        if (!password.equals(user.getPassword())){
             // 密码错误
             throw new LoginException(ErrorCode.LOGIN_ERROR_PASSWORD);
         }
@@ -82,7 +90,7 @@ public class UserServiceImpl implements UserService {
         String login_token = UUID.randomUUID().toString().replace("-", "");
 
         // 将 login_token 信息写入数据库
-        loginTokenMapper.insert(new LoginToken(login_token,user.getId()));
+        userLoginMapper.insert(new UserLogin(login_token,user.getUserId()));
 
 
         // 将 login_token 写入缓存
@@ -93,7 +101,7 @@ public class UserServiceImpl implements UserService {
 //        }
 
         LoginVo loginVo = new LoginVo();
-        loginVo.setLogin_token(login_token);
+        loginVo.setUser_login_token(login_token);
         return loginVo;
     }
 
@@ -131,7 +139,7 @@ public class UserServiceImpl implements UserService {
     public void saveUser(User user) {
 
         // 查询用户是否已经存在
-        User userExist = userMapper.findUserById(user.getId());
+        User userExist = userMapper.findUserById(user.getUserId());
 
         if (userExist != null) {
             throw new LoginException(ErrorCode.USER_REPEAT);
@@ -140,7 +148,7 @@ public class UserServiceImpl implements UserService {
         // 密码加密
         String md5Password = DigestUtils.md5DigestAsHex(user.getPassword().getBytes());
         user.setPassword(md5Password);
-        userMapper.saveUser(user);
+        userMapper.insert(user);
     }
 
     /**
@@ -153,7 +161,7 @@ public class UserServiceImpl implements UserService {
     public void updateUser(User user) {
 
         // 判断用户是否存在
-        User userExist = userMapper.findUserByUsername(user.getUserName());
+        User userExist = userMapper.findUserByUsername(user.getUsername());
         if (userExist == null) {
             throw new AppException(ErrorCode.USER_DOSE_NOT_EXIST);
         }

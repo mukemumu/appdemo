@@ -1,42 +1,45 @@
 package com.buercorp.appdemo.repository.model.po;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
-import lombok.Data;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
-import org.hibernate.validator.constraints.URL;
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
- * @description user 表
- *
- * @author tanghx
- * @date 2023/12/4 10:10
- */
-@Data
-public class User extends BaseEntity {
+* Created by MyBatis Generator 2024/02/29
+* https://github.com/greatwqs/mybatis-generator-plugin
+*/
+@Getter
+@Setter
+@ToString
+public class User {
+    private Long userId;
 
-    @NotNull(message = "账号不能为空")
-    private String userName;
+    private String username;
 
-    @Size(min = 6, max = 12, message = "密码长度为 6 ~ 12！")
+    private String loginId;
+
     private String password;
 
-    @NotNull(message = "用户名不能为空")
-    private String name;
+    private String birthday;
 
-    @Length(min = 11, max = 11, message = "输入正确的手机号！")
+    private Byte sex;
+
+    private String city;
+
     private String phone;
 
-    @URL
+    private String mail;
+
     private String avatar;
 
-    private String description;
+    private Byte identity;
 
-    /**
-     * 1：表示可用，0：表示禁用
-     */
-    @Range(min = 0, max = 1)
-    private Integer status;
+    private Date firstWorkingTime;
 
+    private Byte isValid;
+
+    private Date createTime;
+
+    private Date updateTime;
 }

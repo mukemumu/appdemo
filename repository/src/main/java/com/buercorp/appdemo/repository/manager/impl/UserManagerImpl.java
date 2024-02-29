@@ -1,7 +1,6 @@
 package com.buercorp.appdemo.repository.manager.impl;
 
 import com.buercorp.appdemo.repository.manager.UserManager;
-import com.buercorp.appdemo.repository.mapper.LoginTokenMapper;
 import com.buercorp.appdemo.repository.mapper.UserMapper;
 import com.buercorp.appdemo.repository.model.po.User;
 import org.springframework.beans.factory.annotation.Autowired;

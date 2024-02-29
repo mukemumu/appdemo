@@ -1,6 +1,6 @@
 package com.buercorp.appdemo.portalapi.interceptor;
 
-import com.buercorp.appdemo.service.login_token.LoginTokenService;
+import com.buercorp.appdemo.service.login_token.UserLoginService;
 import com.mysql.cj.util.StringUtils;
 import com.buercorp.appdemo.common.constants.AppConstants;
 import com.buercorp.appdemo.common.exception.ErrorCode;
@@ -33,7 +33,7 @@ import static com.buercorp.appdemo.common.constants.AppHeaders.USER_LOGIN_TOKEN;
 public class UserLoginInterceptor implements HandlerInterceptor {
 
     @Autowired
-    private LoginTokenService loginTokenService;
+    private UserLoginService userLoginService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -61,19 +61,19 @@ public class UserLoginInterceptor implements HandlerInterceptor {
         }
 
         // 判断用户信息是否失效
-        if (loginTokenService.isInvalid(login_token)){
+        if (userLoginService.isInvalid(login_token)){
             // 登录令牌不存在或者已经过期
             throw new LoginException(ErrorCode.LOGIN_AUTH);
         }
 
         // 从 login_token 表中获取用户信息
-        String userInfo = loginTokenService.getUserInfo(login_token);
+        String userInfo = userLoginService.getUserInfo(login_token);
 
         // 将完成登陆的用户信息放入 RequestContextHolder 中
         RequestContextHolder.currentRequestAttributes().setAttribute(AppConstants.LOGIN_USER, userInfo, RequestAttributes.SCOPE_REQUEST);
 
         // 更新 login_token 的过期时间
-        loginTokenService.updateExpirationTime(login_token);
+        userLoginService.updateExpirationTime(login_token);
 
         return true;
     }

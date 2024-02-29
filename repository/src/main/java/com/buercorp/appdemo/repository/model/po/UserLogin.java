@@ -1,38 +1,37 @@
 package com.buercorp.appdemo.repository.model.po;
 
-
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.PastOrPresent;
-import lombok.*;
-
 import java.util.Calendar;
 import java.util.Date;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 /**
- * @author tanghx
- * @description
- * @date 2024/2/18 10:09
- */
+* Created by MyBatis Generator 2024/02/29
+* https://github.com/greatwqs/mybatis-generator-plugin
+*/
 @Data
 @ToString
 @NoArgsConstructor
-public class LoginToken {
-
+public class UserLogin {
     private Long id;
-
-    private String loginToken;
 
     private Long userId;
 
-    private Date expireTime;        // 过期时间
+    private String userLoginToken;
+
+    private Date expireTime;
+
+    private Byte isValid;
 
     private Date createTime;
 
     private Date updateTime;
 
-    public LoginToken(String loginToken, Long userId) {
-        this.loginToken = loginToken;
+    public UserLogin(String userLoginToken, Long userId){
         this.userId = userId;
+        this.userLoginToken = userLoginToken;
 
         // 获取当前时间
         Calendar calendar = Calendar.getInstance();
@@ -41,5 +40,7 @@ public class LoginToken {
         // 设置过期时间，默认过期时间为 30 分钟
         calendar.add(Calendar.MINUTE, 30);
         this.expireTime = calendar.getTime();
+
+        this.isValid = 1;
     }
 }

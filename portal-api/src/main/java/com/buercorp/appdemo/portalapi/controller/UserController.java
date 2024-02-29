@@ -1,10 +1,11 @@
 package com.buercorp.appdemo.portalapi.controller;
 
+import com.buercorp.appdemo.common.constants.AppHeaders;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.LocaleRequired;
 import com.buercorp.appdemo.portalapi.interceptor.annotation.UserLoginRequired;
+import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.service.common.RequestComponent;
 import com.buercorp.appdemo.repository.model.dto.LoginDto;
-import com.buercorp.appdemo.repository.model.po.User;
 import com.buercorp.appdemo.repository.model.vo.LoginVo;
 import com.buercorp.appdemo.repository.model.vo.UserInfoVo;
 import com.buercorp.appdemo.service.user.UserService;
@@ -52,7 +53,7 @@ public class UserController {
      */
     @UserLoginRequired
     @GetMapping(value = "/getUserInfo")
-    public UserInfoVo getUserInfo(@RequestHeader(name = "login_token") String token){
+    public UserInfoVo getUserInfo(@RequestHeader(name = AppHeaders.USER_LOGIN_TOKEN) String token){
         StringBuffer requestURL = requestComponent.getRequest().getRequestURL();
         UserInfoVo userInfo = userService.getUserInfo(token, requestURL);
         return userInfo;
