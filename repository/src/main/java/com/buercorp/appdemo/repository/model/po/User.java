@@ -1,17 +1,18 @@
 package com.buercorp.appdemo.repository.model.po;
 
 import java.util.Date;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+
+import lombok.*;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
 * Created by MyBatis Generator 2024/02/29
 * https://github.com/greatwqs/mybatis-generator-plugin
 */
-@Getter
-@Setter
-@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Document(indexName = "user")
 public class User {
     private Long userId;
 

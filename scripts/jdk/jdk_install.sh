@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #工作目录
-work_home="/home/li-dongdong"
+work_home="/home/buercorp"
 
 #OpenJDK压缩包位置
 jdkTargz="${work_home}/downloads/OpenJDK17U-jdk_x64_linux_hotspot_17.0.9_9.tar.gz"

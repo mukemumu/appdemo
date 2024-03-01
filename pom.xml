@@ -23,6 +23,7 @@
         <module>portal-api</module>
         <module>admin-api</module>
         <module>task</module>
+        <module>batch</module>
     </modules>
 
     <properties>
@@ -35,6 +36,7 @@
         <spring-boot-starter-web.version>3.0.5</spring-boot-starter-web.version>
         <spring-boot-starter-log4j2.version>3.0.5</spring-boot-starter-log4j2.version>
         <spring-boot-starter-actuator.version>3.0.5</spring-boot-starter-actuator.version>
+        <spring-boot-starter-batch>3.0.5</spring-boot-starter-batch>
         <mysql.verison>8.0.30</mysql.verison>
         <fastjson.version>2.0.21</fastjson.version>
         <lombok.version>1.18.20</lombok.version>
@@ -48,6 +50,7 @@
         <hibernate.validator>8.0.0.Final</hibernate.validator>
         <fasterxml.jackson.version>2.12.3</fasterxml.jackson.version>
         <jackson-databind.version>2.12.3</jackson-databind.version>
+        <jakarta.json-api.version>2.0.1</jakarta.json-api.version>
 
     </properties>
 
@@ -73,6 +76,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
                 <version>${spring-boot-starter-actuator.version}</version>
+            </dependency>
+
+            <!-- spring Batch -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-batch</artifactId>
+                <version>${spring-boot-starter-batch}</version>
             </dependency>
 
             <!-- spring test -->
@@ -181,6 +191,13 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-databind.version}</version>
+            </dependency>
+
+            <!-- jakarta.json用于ElasticSearch -->
+            <dependency>
+                <groupId>jakarta.json</groupId>
+                <artifactId>jakarta.json-api</artifactId>
+                <version>${jakarta.json-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

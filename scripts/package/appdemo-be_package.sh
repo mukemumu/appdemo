@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 工作目录
-work_dir="/home/li-dongdong"
+work_dir="/home/buercorp"
 
 # 项目目录
 work_home="${work_dir}/repository/appdemo-be"
