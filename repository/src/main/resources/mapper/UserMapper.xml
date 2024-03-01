@@ -165,4 +165,10 @@
     <select id="getAll" resultMap="UserResultMap">
 
     </select>
+
+  <!--平面文件导入数据库sql，不添加user_id-->
+  <insert id="save" keyColumn="user_id" keyProperty="userId" useGeneratedKeys="true">
+    insert into `user` (username,login_id,password,birthday,sex,city,phone,mail,avatar,identity,first_working_time,is_valid,create_time,update_time)
+    values(#{username},#{loginId},#{password},#{birthday},#{sex},#{city},#{phone},#{mail},#{avatar},#{identity},#{firstWorkingTime},#{isValid},#{createTime},#{updateTime})
+  </insert>
 </mapper>

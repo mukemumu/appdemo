@@ -21,4 +21,6 @@ public interface UserMapper {
     void deleteById(Long id);
 
     List<User> getAll();
+
+    int save(User user);
 }

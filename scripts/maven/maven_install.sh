@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #工作目录
-work_home="/home/li-dongdong"
+work_home="/home/buercorp"
 
 #Maven安装包
 mavenTarGz="${work_home}/downloads/apache-maven-3.9.6-bin.tar.gz"
